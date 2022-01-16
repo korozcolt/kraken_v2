@@ -55,7 +55,6 @@
           </div>
         </div>
         <div class="text-center">
-          <a href="{{ route('register') }}" class="btn-get-started scrollto">REGISTRATE</a>
           <a href="{{ route('login') }}" class="btn-get-started scrollto">INICIA SESIÓN</a>
         </div>
 

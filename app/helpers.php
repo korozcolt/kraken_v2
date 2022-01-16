@@ -16,7 +16,7 @@ if(! function_exists('send_sms_bulk')){
                         'sc' => '890202',
                         'request_dlvr_rcpt' => '0',
                         'sendDate' => \Carbon\Carbon::parse($on_revision->assignment->deadline)->diffForhumans(),
-                        bulk => $arrayNumbers,
+                        'bulk' => $arrayNumbers,
                     ]);
         return response()->json($response);
     }

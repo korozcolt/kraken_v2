@@ -4,39 +4,23 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Carbon\Carbon;
 
-class Voter extends Model
+class Verifier extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'firstname','lastname' ,'dni','phone','phone_two', 
         'address' ,'birthdate','son_number','status','user_id', 
-        'lider_id' ,'city_id','guide','witness' ,'comment',
-        'call_status','place','table',
+        'city_id','guide','witness' ,'comment','place','table','gender'
     ];
-
-    public function lider()
-    {
-        return $this->belongsTo(Lider::class);
-    }
-
-    public function coordinator(){
-        return $this->hasManyThrough(Coordinator::class, Lider::class);
-    }
-
-    public function verifier()
-    {
-        return $this->belongsToMany(Verifier::class);
-    }
 
     public function user(){
         return $this->belongsTo(User::class);
     }
 
-    public function verify(){
-        return VerifiedVoter::find($this->id) ? true : false;
+    public function voter_verified(){
+        return VerifiedVoter::where('verifier_id',$this->id)->all();
     }
 
     public function age(){

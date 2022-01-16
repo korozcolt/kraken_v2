@@ -12,7 +12,9 @@ class Lider extends Model
 
     protected $fillable = [
         'firstname','lastname' ,'dni','phone','phone_two', 
-        'address' ,'birthdate','son_number','status','user_id', 'coordinator_id'
+        'address' ,'birthdate','son_number','status','user_id', 
+        'coordinator_id' ,'city_id','guide','witness' ,'comment',
+        'call_status','place','table','gender'
     ];
 
     public function coordinator()

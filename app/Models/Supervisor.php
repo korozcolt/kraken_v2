@@ -4,31 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Carbon\Carbon;
 
-class Coordinator extends Model
+class Supervisor extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'firstname','lastname' ,'dni','phone','phone_two', 
         'address' ,'birthdate','son_number','status','user_id', 
-        'supervisor_id' ,'city_id','guide','witness' ,'comment',
-        'call_status','place','table','gender'
+        'city_id','guide','witness' ,'comment','place','table','gender'
     ];
 
-    public function supervisor(){
-        return $this->belongsTo(Supervisor::class);
-    }
-
-    public function user()
-    {
+    public function user(){
         return $this->belongsTo(User::class);
-    }
-
-    public function liders()
-    {
-        return $this->hasMany(Lider::class);
     }
 
     public function age(){

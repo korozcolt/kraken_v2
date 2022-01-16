@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\StateController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +20,9 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+//DROPDOWN STATE AND CITIES
+Route::get('state/{state}/cities', [StateController::class, 'getCities']);
+
+//Route::group(['middleware'])
+

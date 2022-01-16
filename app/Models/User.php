@@ -25,8 +25,8 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
-        'firstname','lastname' ,'dni','phone','phone_two', 'password',
-        'role','son_number','status','birthdate','address','email'
+        'firstname','lastname' ,'dni', 'password',
+        'role','status','email'
     ];
 
     /**
@@ -65,12 +65,6 @@ class User extends Authenticatable
 
     public function voterPerDay(){
         return $this->hasMany(Voter::class)->whereDate('created_at',Carbon::now());
-    }
-
-    public function age(){
-        $birthdate = Carbon::parse($this->birthdate);
-        $age = $birthdate->age;
-        return $age;
     }
 
 }
