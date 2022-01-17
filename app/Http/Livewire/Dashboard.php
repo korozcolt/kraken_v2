@@ -32,7 +32,7 @@ class Dashboard extends Component
         $liderPerDay = Lider::whereDate('created_at',Carbon::now())->count();
         return view('livewire.dashboard',compact(
             'censoTotal',
-                'coordinatorTotal',
+            'coordinatorTotal',
             'liderTotal',
             'voterTotal',
             'voterPerDay',

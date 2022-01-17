@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StateController;
+use App\Http\Livewire\Supervisor;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +21,8 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::middleware(['auth:sanctum','verified'])->get('/supervisors', Supervisor::class)->name('supervisors.main');
 
 //DROPDOWN STATE AND CITIES
 Route::get('state/{state}/cities', [StateController::class, 'getCities']);

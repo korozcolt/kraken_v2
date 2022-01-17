@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique()->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->enum('role', ['SUPERADMIN', 'ADMIN', 'COORDINATOR','LIDER','USER'])->default('USER');
+            $table->enum('role', ['SUPERADMIN', 'ADMIN', 'SUPERVISOR','VERIFIER','COORDINATOR','LIDER','USER'])->default('USER');
             $table->enum('status', ['ACTIVE', 'INACTIVE','SUCCESS','NOT_SUCCESS','WAITING','DUPLICATE'])->default('ACTIVE');
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();

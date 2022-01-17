@@ -26,24 +26,6 @@ class CreateVoter extends Component
 
     public function render(){
         $liders = Lider::orderBy('name')->get();
-
-//        $urlsms = "https://api103.hablame.co/api/sms/v3/send/marketing";
-//        $apikeysms = "p3pfwXXgfv5KwSYTFmJSzJaY2G2c7n";
-//        $tokensms = "2e804507282e51deedfecbc39414eb24";
-//        $accountsms = "10022622";
-//
-//        $response = Http::acceptJson()->withHeaders([
-//            'account' => $accountsms,
-//            'apiKey' => $apikeysms,
-//            'token' => $tokensms
-//        ])->post($urlsms, [
-//            'toNumber' => '3016859339',
-//            'sms' => 'Texto de prueba',
-//            'flash' => 0,
-//            'sc' => '890202',
-//            'request_dlvr_rcpt' => '0',
-//        ]);
-
         return view('livewire.create-voter',compact('liders'));
     }
 
