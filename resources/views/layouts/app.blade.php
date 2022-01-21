@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
 
         <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
@@ -47,8 +48,7 @@
 
         @livewireScripts
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="sweetalert2.all.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.6/dist/sweetalert2.all.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/datepicker.bundle.js"></script>
         <script>
@@ -59,7 +59,7 @@
                     'success'
                 )
             });
-            Livewire.on('deleteCenso', censoId => {
+            Livewire.on('deleteSupervisor', supervisorId => {
                 Swal.fire({
                     title: '¿Estas seguro que quieres borrar este registro?',
                     text: "No podrás revertir esto.",
@@ -70,7 +70,7 @@
                     confirmButtonText: 'Si, Borralo!'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        Livewire.emitTo('censo-livewire','delete',censoId);
+                        Livewire.emitTo('supervisor','delete',supervisorId);
                         Swal.fire(
                             'Borrado!',
                             'Tu registro ha sido borrado.',
@@ -139,6 +139,82 @@
                     }
                 })
             });
+        </script>
+        <script type="text/javascript">
+            new Chart(document.getElementById("chartjs-4"), {
+                "type": "doughnut",
+                "data": {
+                    "labels": ["P1", "P2", "P3"],
+                    "datasets": [{
+                        "label": "Issues",
+                        "data": [300, 50, 100],
+                        "backgroundColor": ["rgb(255, 99, 132)", "rgb(54, 162, 235)", "rgb(255, 205, 86)"]
+                    }]
+                }
+            });
+
+            new Chart(document.getElementById("chartjs-1"), {
+                "type": "bar",
+                "data": {
+                    "labels": ["January", "February", "March", "April", "May", "June", "July"],
+                    "datasets": [{
+                        "label": "Likes",
+                        "data": [65, 59, 80, 81, 56, 55, 40],
+                        "fill": false,
+                        "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"],
+                        "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"],
+                        "borderWidth": 1
+                    }]
+                },
+                "options": {
+                    "scales": {
+                        "yAxes": [{
+                            "ticks": {
+                                "beginAtZero": true
+                            }
+                        }]
+                    }
+                }
+            });
+
+            new Chart(document.getElementById("chartjs-0"), {
+                "type": "line",
+                "data": {
+                    "labels": ["Lunes", "Martes", "March", "April", "May", "June", "July"],
+                    "datasets": [{
+                        "label": "Views",
+                        "data": [65, 59, 80, 81, 56, 55, 40],
+                        "fill": false,
+                        "borderColor": "rgb(75, 192, 192)",
+                        "lineTension": 0.1
+                    }]
+                },
+                "options": {}
+            });
+
+            new Chart(document.getElementById("chartjs-7"), {
+                "type": "bar",
+                "data": {
+                    "labels": ["NO LLAMADOS", "A FAVOR", "EN CONTRA", "EQUIVOCADO","NO CONTESTADO","NO EXISTE","EN BLANCO"],
+                    "datasets": [{
+                        "label": "Page Impressions",
+                        "data": [60, 20, 30, 40, 50, 30, 50],
+                        "borderColor": "rgb(255, 99, 132)",
+                        "backgroundColor": "rgba(255, 99, 132, 0.2)"
+                    }]
+                },
+                "options": {
+                    "scales": {
+                        "yAxes": [{
+                            "ticks": {
+                                "beginAtZero": true
+                            }
+                        }]
+                    }
+                }
+            });
+
+
         </script>
     </body>
 </html>

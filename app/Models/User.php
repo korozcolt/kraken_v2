@@ -67,4 +67,22 @@ class User extends Authenticatable
         return $this->hasMany(Voter::class)->whereDate('created_at',Carbon::now());
     }
 
+    public function typeRole(){
+        $user = Coordinator::where('dni',$this->dni)->first();
+        $user2 = Lider::where('dni',$this->dni)->first();
+        $user3 = Supervisor::where('dni',$this->dni)->first();
+        $user4 = Verifier::where('dni',$this->dni)->first();
+        if($user){
+            return 'COORDINATOR';
+        }else if($user2){
+            return 'LIDER';
+        }else if($user3){
+            return 'SUPERVISOR';
+        }else if($user4){
+            return 'VERIFIER';
+        }else{
+            return 'USER';
+        }
+    }
+    
 }

@@ -27,16 +27,15 @@ class Supervisor extends Component
     ];
 
     protected $rules = [
-        'supervisor.name' => 'required',
-        'supervisor.last' => 'required',
+        'supervisor.firstname' => 'required',
+        'supervisor.lastname' => 'required',
         'supervisor.dni' => 'required|numeric',
         'supervisor.phone' => 'required',
-        
     ];
 
     protected $messages = [
-        'name.required' => 'Nombre requerido',
-        'last.required' => 'Apellido requerido',
+        'firstname.required' => 'Nombre requerido',
+        'lastname.required' => 'Apellido requerido',
         'dni.numeric' => 'La cedula debe ser un numero sin letras o caracteres',
         'dni.required' => 'La cedula es campo obligatorio',
         'phone.required' => 'Número requerido',
@@ -57,8 +56,8 @@ class Supervisor extends Component
     public function render()
     {
         if($this->readyToLoad){
-            $supervisors = SupervisorModel::where('name','like','%' . $this->search . '%')
-                ->orWhere('last','like','%' . $this->search . '%')
+            $supervisors = SupervisorModel::where('firstname','like','%' . $this->search . '%')
+                ->orWhere('lastname','like','%' . $this->search . '%')
                 ->orWhere('dni','like','%' . $this->search . '%')
                 ->orderBy($this->sort, $this->direction)
                 ->paginate($this->cant);
@@ -84,13 +83,14 @@ class Supervisor extends Component
     }
 
     public function delete(SupervisorModel $supervisor){
-        $supervisor->delete();
+        $this->supervisor->status = 'INACTIVE';
+        $this->supervisor->save();
     }
 
     public function update(){
         $this->validate();
         $this->supervisor->save();
         $this->reset(['open_edit']);
-        $this->emit('alert','Se ha editado un Registro de Coordinador');
+        $this->emit('alert','Se ha editado un Registro de Supervisor');
     }
 }

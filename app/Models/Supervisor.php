@@ -19,6 +19,34 @@ class Supervisor extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function liderExists(){
+        $user = Lider::where('dni',$this->dni)->first();
+        if($user){
+            return true;
+        }else{return false;}
+    }
+
+    public function verifierExists(){
+        $user = Verifier::where('dni',$this->dni)->first();
+        if($user){
+            return true;
+        }else{return false;}
+    }
+
+    public function coordinatorExists(){
+        $user = Coordinator::where('dni',$this->dni)->first();
+        if($user){
+            return true;
+        }else{return false;}
+    }
+
+    public function voterExists(){
+        $user = Voter::where('dni',$this->dni)->first();
+        if($user){
+            return true;
+        }else{return false;}
+    }
+
     public function age(){
         $birthdate = Carbon::parse($this->birthdate);
         $age = $birthdate->age;

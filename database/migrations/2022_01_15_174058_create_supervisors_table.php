@@ -30,7 +30,7 @@ class CreateSupervisorsTable extends Migration
             $table->boolean('guide')->default(false);
             $table->boolean('witness')->default(false);
             $table->enum('status', ['ACTIVE', 'INACTIVE','SUCCESS','NOT_SUCCESS','WAITING','DUPLICATE'])->default('ACTIVE');
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('user_id')->constrained()->nullable();
             $table->timestamps();
         });
     }

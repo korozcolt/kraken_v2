@@ -25,7 +25,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::middleware(['auth:sanctum','verified'])->get('/supervisors', Supervisor::class)->name('supervisors.main');
 
 //DROPDOWN STATE AND CITIES
-Route::get('state/{state}/cities', [StateController::class, 'getCities']);
+Route::get('state/{state}/cities', [StateController::class, 'getCities'])->name('getCities');
 
 //Route::group(['middleware'])
 
