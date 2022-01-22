@@ -44,10 +44,8 @@ class CreateVoter extends Component
         'phone' => 'numeric|required',
         'phone_two' => 'numeric|nullable',
         'address' => 'nullable|max:100',
-        'birthdate' => 'date|nullable',
+        'birthdate' => 'required',
         'son_number' => 'numeric|nullable',
-        'guide' => 'boolean',
-        'witness' => 'boolean',
         'comment' => 'nullable|max:255',
     ];
 
@@ -61,10 +59,8 @@ class CreateVoter extends Component
         'phone.numeric' => 'El teléfono debe ser un numero sin letras o caracteres',
         'phone_two.numeric' => 'El teléfono debe ser un numero sin letras o caracteres',
         'address.max' => 'La dirección no debe exceder los 100 caracteres',
-        'birthdate.date' => 'La fecha debe ser una fecha valida',
+        'birthdate.required' => 'La fecha debe ser una fecha valida',
         'son_number.numeric' => 'El número de hijos debe ser un numero sin letras o caracteres',
-        'guide.boolean' => 'El campo debe ser un booleano',
-        'witness.boolean' => 'El campo debe ser un booleano',
         'comment.max' => 'El comentario no debe exceder los 255 caracteres'
     ];
 
@@ -89,12 +85,12 @@ class CreateVoter extends Component
             'phone' => $this->phone,
             'phone_two' => $this->phone_two,
             'address' => strtoupper($this->address),
-            'birthdate' => Carbon::createFromFormat('d/m/Y', $this->birthdate)->format('Y-m-d'),
+            'birthdate' => $this->birthdate,
             'son_number' => $this->son_number,
             'status' => 'ACTIVE',
             'city_id' => $this->selectedCity,
-            'guide' => $this->guide,
-            'witness' => $this->guide,
+            'guide' => 'false',
+            'witness' => 'false',
             'comment' => $this->comment,
             'gender' => $this->gender,
             'user_id'=> \Auth::id(),
