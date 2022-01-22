@@ -39,8 +39,8 @@
                 <x-jet-input-error for="address"></x-jet-input-error>
             </div>
             <div class="mb-4">
-                <x-jet-label for="brithdate" value="{{ __('Fecha de Nacimiento') }}" />
-                <x-jet-input type="date" class="w-full" wire:model.defer="brithdate"></x-jet-input>
+                <x-jet-label for="birthdate" value="{{ __('Fecha de Nacimiento') }}" />
+                <x-jet-input type="date" class="w-full" wire:model.defer="birthdate"></x-jet-input>
                 <x-jet-input-error for="birthdate"></x-jet-input-error>
             </div>
             <div class="mb-4">
