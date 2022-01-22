@@ -8,6 +8,7 @@ use App\Actions\Fortify\UpdateUserPassword;
 use App\Actions\Fortify\UpdateUserProfileInformation;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
+use Laravel\Fortify\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Fortify\Fortify;
@@ -43,7 +44,7 @@ class FortifyServiceProvider extends ServiceProvider
   
             if (
                 $user &&
-                Hash::check($request->password, $user->password)
+                \Hash::check($request->password, $user->password)
             ) {
                 return $user;
             }

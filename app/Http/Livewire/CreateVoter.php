@@ -4,84 +4,106 @@ namespace App\Http\Livewire;
 
 use App\Models\Censo;
 use App\Models\Voter;
+use App\Models\Coordinator;
+use App\Models\State;
+use App\Models\City;
+use App\Models\Supervisor;
+use Carbon\Carbon;
 use App\Models\Lider;
 use Livewire\Component;
-use Illuminate\Support\Facades\Http;
 
 class CreateVoter extends Component
 {
     public $open = false;
-    public $name, $last, $dni, $phone, $phone2, $lider_id;
+    public $firstname, $lastname, $dni, $phone, $phone_two, $address, $birthdate, $son_number, $status,  $city_id, $guide, $witness, $comment, $gender, $coordinator_id;
+    public $states;
+    public $cities;
 
-    public function updatedDni(){
-        $voter = Voter::where('dni','=',$this->dni)->first();
-        if(!empty($voter)){
-            $this->name = $voter->name;
-            $this->last = $voter->last;
-        }else{
-            $this->name = "";
-            $this->last = "";
+    public $selectedState = null;
+    public $selectedCity = null;
+
+    public function mount()
+    {
+        $this->states = State::all();
+        $this->cities = collect();
+        $this->selectedCity = null;
+
+        if(!is_null($this->selectedCity)){
+            $city = City::where('state_id', $this->selectedState)->get();
+            if($city){
+                $this->cities = City::where('state_id', $city->state_id)->get();
+                $this->selectedState = $city->state_id;
+            }
+        }
+    }
+
+    protected $rules = [
+        'firstname' => 'required|max:50',
+        'lastname' => 'required|max:50',
+        'dni' => 'numeric|required|unique:supervisors,dni',
+        'phone' => 'numeric|required',
+        'phone_two' => 'numeric|nullable',
+        'address' => 'nullable|max:100',
+        'birthdate' => 'date|nullable',
+        'son_number' => 'numeric|nullable',
+        'guide' => 'boolean',
+        'witness' => 'boolean',
+        'comment' => 'nullable|max:255',
+    ];
+
+    protected $messages = [
+        'firstname.required' => 'Nombre requerido',
+        'lastname.required' => 'Apellido requerido',
+        'dni.unique' => 'Este número ya se encuentra en uso',
+        'dni.numeric' => 'La cedula debe ser un numero sin letras o caracteres',
+        'dni.required' => 'La cedula es campo obligatorio',
+        'phone.required' => 'Teléfono requerido',
+        'phone.numeric' => 'El teléfono debe ser un numero sin letras o caracteres',
+        'phone_two.numeric' => 'El teléfono debe ser un numero sin letras o caracteres',
+        'address.max' => 'La dirección no debe exceder los 100 caracteres',
+        'birthdate.date' => 'La fecha debe ser una fecha valida',
+        'son_number.numeric' => 'El número de hijos debe ser un numero sin letras o caracteres',
+        'guide.boolean' => 'El campo debe ser un booleano',
+        'witness.boolean' => 'El campo debe ser un booleano',
+        'comment.max' => 'El comentario no debe exceder los 255 caracteres'
+    ];
+
+    public function updatedSelectedState($state)
+    {
+        if (!is_null($state)) {
+            $this->cities = City::where('state_id', $state)->get();
         }
     }
 
     public function render(){
-        $liders = Lider::orderBy('name')->get();
-
-//        $urlsms = "https://api103.hablame.co/api/sms/v3/send/marketing";
-//        $apikeysms = "p3pfwXXgfv5KwSYTFmJSzJaY2G2c7n";
-//        $tokensms = "2e804507282e51deedfecbc39414eb24";
-//        $accountsms = "10022622";
-//
-//        $response = Http::acceptJson()->withHeaders([
-//            'account' => $accountsms,
-//            'apiKey' => $apikeysms,
-//            'token' => $tokensms
-//        ])->post($urlsms, [
-//            'toNumber' => '3016859339',
-//            'sms' => 'Texto de prueba',
-//            'flash' => 0,
-//            'sc' => '890202',
-//            'request_dlvr_rcpt' => '0',
-//        ]);
-
+        $liders = Lider::orderBy('firstname')->get();
         return view('livewire.create-voter',compact('liders'));
     }
 
     public function save(){
-        $voter = voter::where('dni',$this->dni)->first();
-        $name = "";
-        $last = "";
-        if($voter != null){
-            $name = $voter->lider->name;
-            $last = $voter->lider->last;
-        }
-        $this->validate([
-            'name' => 'required|max:50',
-            'last' => 'required|max:50',
-            'dni' => 'required|unique:voters,dni',
-            'phone' => 'required',
-            'lider_id' => 'required'
-        ],[
-            'name.required' => 'Nombre requerido',
-            'last.required' => 'Apellido requerido',
-            'dni.unique' => 'Este número ya se encuentra en uso por '.$name.' '.$last,
-            'dni.required' => 'La cedula es campo obligatorio',
-            'phone.required' => 'Teléfono requerido',
-            'lider_id.required' => 'Lider requerido',
-        ]);
+        $this->validate();
         Voter::create([
-            'name' => strtoupper($this->name),
-            'last' => strtoupper($this->last),
-            'dni' => trim($this->dni),
+            'firstname' => strtoupper($this->firstname),
+            'lastname' => strtoupper($this->lastname),
+            'dni' => $this->dni,
             'phone' => $this->phone,
-            'phone2' => $this->phone2,
+            'phone_two' => $this->phone_two,
+            'address' => strtoupper($this->address),
+            'birthdate' => Carbon::createFromFormat('d/m/Y', $this->birthdate)->format('Y-m-d'),
+            'son_number' => $this->son_number,
+            'status' => 'ACTIVE',
+            'city_id' => $this->selectedCity,
+            'guide' => $this->guide,
+            'witness' => $this->guide,
+            'comment' => $this->comment,
+            'gender' => $this->gender,
+            'user_id'=> \Auth::id(),
             'lider_id' => $this->lider_id,
-            'user_id' => \Auth::id(),
-            'status' => 1
+            'call_status' => 'NOT_CALLED',
         ]);
 
         $this->reset([
-            'open','name','last','dni','phone','phone2'
+            'open','firstname','lastname','phone','phone_two','address','birthdate','son_number','status','city_id','guide','witness','comment','gender'
         ]);
         $this->emitTo('voter-livewire','render');
         $this->emit('alert','Se ha creado un Registro de Votante');

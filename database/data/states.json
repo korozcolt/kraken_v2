@@ -1,0 +1,130 @@
+[
+  {
+    "id": 5,
+    "name": "Antioquia"
+  },
+  {
+    "id": 15,
+    "name": "Boyacá"
+  },
+  {
+    "id": 23,
+    "name": "Córdoba"
+  },
+  {
+    "id": 27,
+    "name": "Chocó"
+  },
+  {
+    "id": 52,
+    "name": "Nariño"
+  },
+  {
+    "id": 68,
+    "name": "Santander"
+  },
+  {
+    "id": 50,
+    "name": "Meta"
+  },
+  {
+    "id": 8,
+    "name": "Atlántico"
+  },
+  {
+    "id": 13,
+    "name": "Bolívar"
+  },
+  {
+    "id": 17,
+    "name": "Caldas"
+  },
+  {
+    "id": 18,
+    "name": "Caquetá"
+  },
+  {
+    "id": 19,
+    "name": "Cauca"
+  },
+  {
+    "id": 20,
+    "name": "Cesar"
+  },
+  {
+    "id": 25,
+    "name": "Cundinamarca"
+  },
+  {
+    "id": 41,
+    "name": "Huila"
+  },
+  {
+    "id": 44,
+    "name": "La Guajira"
+  },
+  {
+    "id": 47,
+    "name": "Magdalena"
+  },
+  {
+    "id": 63,
+    "name": "Quindío"
+  },
+  {
+    "id": 66,
+    "name": "Risaralda"
+  },
+  {
+    "id": 70,
+    "name": "Sucre"
+  },
+  {
+    "id": 73,
+    "name": "Tolima"
+  },
+  {
+    "id": 81,
+    "name": "Arauca"
+  },
+  {
+    "id": 85,
+    "name": "Casanare"
+  },
+  {
+    "id": 86,
+    "name": "Putumayo"
+  },
+  {
+    "id": 91,
+    "name": "Amazonas"
+  },
+  {
+    "id": 94,
+    "name": "Guainía"
+  },
+  {
+    "id": 99,
+    "name": "Vichada"
+  },
+  {
+    "id": 95,
+    "name": "Guaviare"
+  },
+  {
+    "id": 88,
+    "name": "Archipiélago de San Andrés, Providencia y Santa Catalina"
+  },
+  {
+    "id": 11,
+    "name": "Bogotá D.C."
+  },
+  {
+    "id": 54,
+    "name": "Norte de Santander"
+  },
+  {
+    "id": 76,
+    "name": "Valle del Cauca"
+  }
+]

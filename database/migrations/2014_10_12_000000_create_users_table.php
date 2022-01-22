@@ -18,16 +18,11 @@ class CreateUsersTable extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->bigInteger('dni')->unique();
-            $table->double('phone')->nullable();
-            $table->double('phone_two')->nullable();
-            $table->string('address')->nullable();
-            $table->date('birthdate')->nullable();
-            $table->integer('son_number')->nullable();
             $table->string('email')->unique()->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->enum('role', ['SUPERADMIN', 'ADMIN', 'COORDINATOR','LIDER','USER'])->default('USER');
-            $table->enum('status', ['ACTIVE','INACTIVE'])->default('ACTIVE');
+            $table->enum('role', ['SUPERADMIN', 'ADMIN', 'SUPERVISOR','VERIFIER','COORDINATOR','LIDER','USER'])->default('USER');
+            $table->enum('status', ['ACTIVE', 'INACTIVE','SUCCESS','NOT_SUCCESS','WAITING','DUPLICATE'])->default('ACTIVE');
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();

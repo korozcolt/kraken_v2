@@ -22,8 +22,14 @@ class CreateLidersTable extends Migration
             $table->double('phone_two')->nullable()->default(0);
             $table->string('address')->nullable();
             $table->date('birthdate')->nullable();
+            $table->enum('gender',['MALE','FEMALE','OTHER','NONE'])->default('NONE');
+            $table->string('place')->nullable();
+            $table->string('table')->nullable();
             $table->integer('son_number')->nullable();
-            $table->enum('status', ['ACTIVE', 'INACTIVE','UNIVERSITY','WITNESS'])->default('ACTIVE');
+            $table->text('comment')->nullable();
+            $table->boolean('guide')->default(false);
+            $table->boolean('witness')->default(false);
+            $table->enum('status', ['ACTIVE', 'INACTIVE','SUCCESS','NOT_SUCCESS','WAITING','DUPLICATE'])->default('ACTIVE');
             $table->foreignId('coordinator_id')->constrained();
             $table->foreignId('user_id')->constrained();
             $table->timestamps();

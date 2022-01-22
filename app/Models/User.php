@@ -25,8 +25,8 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
-        'firstname','lastname' ,'dni','phone','phone_two', 'password',
-        'role','son_number','status','birthdate','address','email'
+        'firstname','lastname' ,'dni', 'password',
+        'role','status','email'
     ];
 
     /**
@@ -67,10 +67,22 @@ class User extends Authenticatable
         return $this->hasMany(Voter::class)->whereDate('created_at',Carbon::now());
     }
 
-    public function age(){
-        $birthdate = Carbon::parse($this->birthdate);
-        $age = $birthdate->age;
-        return $age;
+    public function typeRole(){
+        $user = Coordinator::where('dni',$this->dni)->first();
+        $user2 = Lider::where('dni',$this->dni)->first();
+        $user3 = Supervisor::where('dni',$this->dni)->first();
+        $user4 = Verifier::where('dni',$this->dni)->first();
+        if($user){
+            return 'COORDINATOR';
+        }else if($user2){
+            return 'LIDER';
+        }else if($user3){
+            return 'SUPERVISOR';
+        }else if($user4){
+            return 'VERIFIER';
+        }else{
+            return 'USER';
+        }
     }
-
+    
 }
