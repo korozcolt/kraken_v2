@@ -70,7 +70,7 @@
                     confirmButtonText: 'Si, Borralo!'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        Livewire.emitTo('supervisor','delete',supervisorId);
+                        Livewire.emitTo('supervisor-livewire','delete',supervisorId);
                         Swal.fire(
                             'Borrado!',
                             'Tu registro ha sido borrado.',

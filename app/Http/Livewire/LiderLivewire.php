@@ -28,16 +28,16 @@ class LiderLivewire extends Component
     ];
 
     protected $rules = [
-        'lider.name' => 'required',
-        'lider.last' => 'required',
+        'lider.firstname' => 'required',
+        'lider.lastname' => 'required',
         'lider.dni' => 'required|numeric',
         'lider.phone' => 'required',
         'lider.coordinator_id' => 'required'
     ];
 
     protected $messages = [
-        'name.required' => 'Nombre requerido',
-        'last.required' => 'Apellido requerido',
+        'firstname.required' => 'Nombre requerido',
+        'lastname.required' => 'Apellido requerido',
         'dni.numeric' => 'La cedula debe ser un numero sin letras o caracteres',
         'dni.required' => 'La cedula es campo obligatorio',
         'phone.required' => 'Número requerido',
@@ -62,15 +62,15 @@ class LiderLivewire extends Component
     public function render()
     {
         if($this->readyToLoad){
-            $liders = Lider::where('name','like','%' . $this->search . '%')
-                ->orWhere('last','like','%' . $this->search . '%')
+            $liders = Lider::where('firstname','like','%' . $this->search . '%')
+                ->orWhere('lastname','like','%' . $this->search . '%')
                 ->orWhere('dni','like','%' . $this->search . '%')
                 ->orderBy($this->sort, $this->direction)
                 ->paginate($this->cant);
         }else{
             $liders = [];
         }
-        $coordinators = Coordinator::where('status',1)->orderBy('name')->get();
+        $coordinators = Coordinator::where('status','ACTIVE')->orderBy('firstname')->get();
         return view('livewire.lider-livewire',compact('liders','coordinators'));
     }
 

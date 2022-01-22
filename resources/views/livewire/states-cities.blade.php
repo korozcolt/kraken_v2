@@ -21,6 +21,7 @@
                 <option value="{{ $state->id }}">{{ $state->name }}</option>
             @endforeach
         </select>
+        <x-jet-input-error for="state"></x-jet-input-error>
     </div>
 
     @if (!is_null($selectedState))
@@ -46,6 +47,7 @@
                     <option value="{{ $city->id }}">{{ $city->name }}</option>
                 @endforeach
             </select>
+            <x-jet-input-error for="city_id"></x-jet-input-error>
         </div>
     @endif
 </div>

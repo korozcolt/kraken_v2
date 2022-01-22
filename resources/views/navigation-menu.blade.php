@@ -17,7 +17,23 @@
                     </x-jet-nav-link>
 
                     <x-jet-nav-link href="{{ route('supervisors.main') }}" :active="request()->routeIs('supervisors.main')">
-                        {{ __('Supervisor') }}
+                        {{ __('Supervisores') }}
+                    </x-jet-nav-link>
+
+                    <x-jet-nav-link href="{{ route('coordinators.main') }}" :active="request()->routeIs('coordinators.main')">
+                        {{ __('Coordinadores') }}
+                    </x-jet-nav-link>
+
+                    <x-jet-nav-link href="{{ route('liders.main') }}" :active="request()->routeIs('liders.main')">
+                        {{ __('Lideres') }}
+                    </x-jet-nav-link>
+
+                    <x-jet-nav-link href="{{ route('voters.main') }}" :active="request()->routeIs('voters.main')">
+                        {{ __('Votantes') }}
+                    </x-jet-nav-link>
+
+                    <x-jet-nav-link href="{{ route('reports.main') }}" :active="request()->routeIs('reports.main')">
+                        {{ __('Reportes') }}
                     </x-jet-nav-link>
                 </div>
             </div>
@@ -146,7 +162,19 @@
                 {{ __('Dashboard') }}
             </x-jet-responsive-nav-link>
             <x-jet-responsive-nav-link href="{{ route('supervisors.main') }}" :active="request()->routeIs('supervisors.main')">
-                {{ __('Supervisor') }}
+                {{ __('Supervisores') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('coordinators.main') }}" :active="request()->routeIs('coordinators.main')">
+                {{ __('Coordinadores') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('liders.main') }}" :active="request()->routeIs('liders.main')">
+                {{ __('Lideres') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('voters.main') }}" :active="request()->routeIs('voters.main')">
+                {{ __('Votantes') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('reports.main') }}" :active="request()->routeIs('reports.main')">
+                {{ __('Reportes') }}
             </x-jet-responsive-nav-link>
         </div>
 

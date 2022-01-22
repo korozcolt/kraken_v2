@@ -17,7 +17,7 @@ class VoterLivewire extends Component
     public $voter;
     public $open_edit = false;
     public $open_status = false;
-    public $sort = 'name';
+    public $sort = 'firstname';
     public $direction = 'asc';
     public $cant = '10';
     public $readyToLoad = false;
@@ -30,8 +30,8 @@ class VoterLivewire extends Component
     ];
 
     protected $rules = [
-        'voter.name' => 'required',
-        'voter.last' => 'required',
+        'voter.firstname' => 'required',
+        'voter.lastname' => 'required',
         'voter.dni' => 'required|numeric',
         'voter.phone' => 'required',
         'voter.lider_id' => 'required',
@@ -39,8 +39,8 @@ class VoterLivewire extends Component
     ];
 
     protected $messages = [
-        'name.required' => 'Nombre requerido',
-        'last.required' => 'Apellido requerido',
+        'firstname.required' => 'Nombre requerido',
+        'lastname.required' => 'Apellido requerido',
         'dni.numeric' => 'La cedula debe ser un numero sin letras o caracteres',
         'dni.required' => 'La cedula es campo obligatorio',
         'phone.required' => 'Número requerido',
@@ -66,15 +66,15 @@ class VoterLivewire extends Component
     public function render()
     {
         if($this->readyToLoad){
-            $voters = voter::where('name','like','%' . $this->search . '%')
-                ->orWhere('last','like','%' . $this->search . '%')
-                ->orWhere('dni','=',$this->search)
+            $voters = voter::where('firstname','like','%' . $this->search . '%')
+                ->orWhere('lastname','like','%' . $this->search . '%')
+                ->orWhere('dni','LIKE',$this->search)
                 ->orderBy($this->sort, $this->direction)
                 ->paginate($this->cant);
         }else{
             $voters = [];
         }
-        $liders = Lider::where('status',1)->orderBy('name')->get();
+        $liders = Lider::where('status','ACTIVE')->orderBy('firstname')->get();
         return view('livewire.voter-livewire',compact('voters','liders'));
     }
 

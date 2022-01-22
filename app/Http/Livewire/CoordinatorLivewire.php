@@ -26,15 +26,15 @@ class CoordinatorLivewire extends Component
     ];
 
     protected $rules = [
-        'coordinator.name' => 'required',
-        'coordinator.last' => 'required',
+        'coordinator.firstname' => 'required',
+        'coordinator.lastname' => 'required',
         'coordinator.dni' => 'required|numeric',
         'coordinator.phone' => 'required',
     ];
 
     protected $messages = [
-        'name.required' => 'Nombre requerido',
-        'last.required' => 'Apellido requerido',
+        'firstname.required' => 'Nombre requerido',
+        'lastname.required' => 'Apellido requerido',
         'dni.numeric' => 'La cedula debe ser un numero sin letras o caracteres',
         'dni.required' => 'La cedula es campo obligatorio',
         'phone.required' => 'Número requerido',
@@ -58,8 +58,8 @@ class CoordinatorLivewire extends Component
     public function render()
     {
         if($this->readyToLoad){
-            $coordinators = Coordinator::where('name','like','%' . $this->search . '%')
-                ->orWhere('last','like','%' . $this->search . '%')
+            $coordinators = Coordinator::where('firstname','like','%' . $this->search . '%')
+                ->orWhere('lastname','like','%' . $this->search . '%')
                 ->orWhere('dni','like','%' . $this->search . '%')
                 ->orderBy($this->sort, $this->direction)
                 ->paginate($this->cant);

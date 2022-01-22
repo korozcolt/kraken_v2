@@ -4,11 +4,35 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\State;
+use App\Models\City;
+use App\Models\Supervisor;
+use Carbon\Carbon;
 
 class CreateSupervisor extends Component
 {
     public $open = false;
-    public $firstname, $lastname, $dni, $phone, $phone_two, $address, $birthdate, $son_number, $status,  $city_id, $guide, $witness, $comment;
+    public $firstname, $lastname, $dni, $phone, $phone_two, $address, $birthdate, $son_number, $status,  $city_id, $guide, $witness, $comment, $gender;
+    public $states;
+    public $cities;
+
+    public $selectedState = null;
+    public $selectedCity = null;
+
+    public function mount()
+    {
+        $this->states = State::all();
+        $this->cities = collect();
+        $this->selectedCity = null;
+
+        if(!is_null($this->selectedCity)){
+            $city = City::where('state_id', $this->selectedState)->get();
+            if($city){
+                $this->cities = City::where('state_id', $city->state_id)->get();
+                $this->selectedState = $city->state_id;
+            }
+        }
+    }
+    
 
     protected $rules = [
         'firstname' => 'required|max:50',
@@ -19,10 +43,9 @@ class CreateSupervisor extends Component
         'address' => 'nullable|max:100',
         'birthdate' => 'date|nullable',
         'son_number' => 'numeric|nullable',
-        'city_id' => 'required',
         'guide' => 'boolean',
         'witness' => 'boolean',
-        'comment' => 'nullable|max:255'
+        'comment' => 'nullable|max:255', 
     ];
 
     protected $messages = [
@@ -37,11 +60,17 @@ class CreateSupervisor extends Component
         'address.max' => 'La dirección no debe exceder los 100 caracteres',
         'birthdate.date' => 'La fecha debe ser una fecha valida',
         'son_number.numeric' => 'El número de hijos debe ser un numero sin letras o caracteres',
-        'city_id.required' => 'La ciudad es campo obligatorio',
         'guide.boolean' => 'El campo debe ser un booleano',
         'witness.boolean' => 'El campo debe ser un booleano',
         'comment.max' => 'El comentario no debe exceder los 255 caracteres'
     ];
+
+    public function updatedSelectedState($state)
+    {
+        if (!is_null($state)) {
+            $this->cities = City::where('state_id', $state)->get();
+        }
+    }
 
     public function render()
     {
@@ -49,7 +78,7 @@ class CreateSupervisor extends Component
     }
 
     public function save(){
-        $this->validate();
+        //$this->validate();
         Supervisor::create([
             'firstname' => strtoupper($this->firstname),
             'lastname' => strtoupper($this->lastname),
@@ -57,18 +86,20 @@ class CreateSupervisor extends Component
             'phone' => $this->phone,
             'phone_two' => $this->phone_two,
             'address' => strtoupper($this->address),
-            'birthdate' => $this->birthdate,
+            'birthdate' => Carbon::createFromFormat('d/m/Y', $this->birthdate)->format('Y-m-d'),
             'son_number' => $this->son_number,
             'status' => 'ACTIVE',
-            'city_id' => $this->city_id,
+            'city_id' => $this->selectedCity,
             'guide' => $this->guide,
-            'witness' => $this->witness,
+            'witness' => 'false',
             'comment' => $this->comment,
+            'gender' => $this->gender,
+            'user_id'=> \Auth::id(),
         ]);
         $this->reset([
-            'open','firstname','lastname','phone','phone_two','address','birthdate','son_number','status','user_id','city_id','guide','witness','comment'
+            'open','firstname','lastname','phone','phone_two','address','birthdate','son_number','status','city_id','guide','witness','comment','gender'
         ]);
-        $this->emitTo('supervisor','render');
+        $this->emitTo('supervisor-livewire','render');
         $this->emit('alert','Se ha creado un Registro de Supervisor');
     }
 }

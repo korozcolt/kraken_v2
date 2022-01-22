@@ -31,6 +31,7 @@ class StatesCities extends Component
 
     public function render()
     {
+        
         return view('livewire.states-cities');
     }
 

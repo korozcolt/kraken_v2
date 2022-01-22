@@ -1,7 +1,7 @@
-<div wire:init="loadSupervisor">
+<div wire:init="loadLider">
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Supervisor') }}
+            {{ __('Lider') }}
         </h2>
     </x-slot>
     <div class="py-12">
@@ -11,7 +11,7 @@
                     <div class="box pt-6">
                         <div class="box-wrapper">
                             <div class="flex justify-end p-4">
-                                @livewire('create-supervisor')
+                                @livewire('create-lider')
                             </div>
                             <div class=" bg-white rounded flex items-center w-full p-3 shadow-sm border border-gray-200">
                                 <button class="outline-none focus:outline-none"><svg class=" w-5 text-gray-600 h-5 cursor-pointer" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
@@ -34,7 +34,7 @@
                                         <i class="fas fa-stroopwafel fa-spin"></i>
                                     </div>
                                 @endif
-                                @if( count($supervisors) > 0)
+                                @if( count($liders) > 0)
                                     <table class="w-full">
                                         <thead>
                                         <tr class="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase border-b border-gray-600">
@@ -90,7 +90,7 @@
                                         </tr>
                                         </thead>
                                         <tbody class="bg-white">
-                                        @foreach($supervisors as $value)
+                                        @foreach($liders as $value)
                                             <tr class="text-gray-700">
                                                 <td class="px-4 py-3 border">
                                                     <div class="flex items-center text-sm">
@@ -116,9 +116,9 @@
                                         @endforeach
                                         </tbody>
                                     </table>
-                                    @if($supervisors->hasPages())
+                                    @if($liders->hasPages())
                                         <div class="px-6 py-3 mt-2 mb-2 mr-4 ml-4">
-                                            {{ $supervisors->links() }}
+                                            {{ $liders->links() }}
                                         </div>
                                     @endif
                                 @else
@@ -132,36 +132,36 @@
         </div>
         <x-jet-dialog-modal wire:model="open_edit">
             <x-slot name="title">
-                Edita un registro de Supervisor {{ $supervisor->name }} {{ $supervisor->last }}
+                Edita un registro de Lider {{ $lider->firstname }} {{ $lider->lastname }}
             </x-slot>
             <x-slot name="content">
                 <div class="mb-4">
                     <x-jet-label value="Nombre" class="text-left"></x-jet-label>
-                    <x-jet-input type="text" class="w-full" wire:model="supervisor.name"></x-jet-input>
+                    <x-jet-input type="text" class="w-full" wire:model="lider.firstname"></x-jet-input>
                 </div>
                 <div class="mb-4">
                     <x-jet-label value="Apellido" class="text-left"></x-jet-label>
-                    <x-jet-input type="text" class="w-full" wire:model="supervisor.last"></x-jet-input>
+                    <x-jet-input type="text" class="w-full" wire:model="lider.lastname"></x-jet-input>
                 </div>
                 <div class="mb-4">
                     <x-jet-label value="Cedula" class="text-left"></x-jet-label>
-                    <x-jet-input type="number" class="w-full" wire:model="supervisor.dni"></x-jet-input>
+                    <x-jet-input type="number" class="w-full" wire:model="lider.dni"></x-jet-input>
                 </div>
                 <div class="mb-4">
                     <x-jet-label value="Teléfono" class="text-left"></x-jet-label>
-                    <x-jet-input type="text" class="w-full" wire:model="supervisor.phone"></x-jet-input>
+                    <x-jet-input type="text" class="w-full" wire:model="lider.phone"></x-jet-input>
                 </div>
                 <div class="mb-4">
                     <x-jet-label value="Teléfono 2" class="text-left"></x-jet-label>
-                    <x-jet-input type="text" class="w-full" wire:model="supervisor.phone_two"></x-jet-input>
+                    <x-jet-input type="text" class="w-full" wire:model="lider.phone_two"></x-jet-input>
                 </div>
                 <div class="mb-4">
                     <x-jet-label value="Dirección" class="text-left"></x-jet-label>
-                    <x-jet-input type="text" class="w-full" wire:model="supervisor.address"></x-jet-input>
+                    <x-jet-input type="text" class="w-full" wire:model="lider.address"></x-jet-input>
                 </div>
                 <div class="mb-4">
-                    <x-jet-label value="Teléfono" class="text-left"></x-jet-label>
-                    <select wire:model="supervisor.gender" class="w-full" name="gender" id="gender">
+                    <x-jet-label value="Sexo" class="text-left"></x-jet-label>
+                    <select wire:model="lider.gender" class="w-full" name="gender" id="gender">
                         <option value="NONE">Ningun@</option>
                         <option value="MALE">Masculino</option>
                         <option value="FEMALE">Femenino</option>
@@ -170,16 +170,8 @@
                 </div>
                 <div class="mb-4">
                     <x-jet-label for="brithdate" value="{{ __('Fecha de Nacimiento') }}" />
-                    <div class="relative">
-                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                            <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
-                        </div>
-                        <input datepicker="" datepicker-autohide="" wire:model="supervisor.birthdate" name="birthdate" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 datepicker-input" placeholder="Selecciona una fecha">
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <x-jet-label value="Dirección" class="text-left"></x-jet-label>
-                    <x-jet-input type="text" class="w-full" wire:model="supervisor.address"></x-jet-input>
+                    <x-jet-input type="date" class="w-full" wire:model="lider.brithdate"></x-jet-input>
+                    <x-jet-input-error for="birthdate"></x-jet-input-error>
                 </div>
             </x-slot>
             <x-slot name="footer">

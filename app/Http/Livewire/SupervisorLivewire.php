@@ -7,7 +7,7 @@ use App\Models\Supervisor as SupervisorModel;
 use Livewire\WithPagination;
 
 
-class Supervisor extends Component
+class SupervisorLivewire extends Component
 {
     use WithPagination;
 
@@ -57,14 +57,15 @@ class Supervisor extends Component
     {
         if($this->readyToLoad){
             $supervisors = SupervisorModel::where('firstname','like','%' . $this->search . '%')
-                ->orWhere('lastname','like','%' . $this->search . '%')
-                ->orWhere('dni','like','%' . $this->search . '%')
-                ->orderBy($this->sort, $this->direction)
-                ->paginate($this->cant);
+                    ->where('status', '=', 'ACTIVE')    
+                    ->orWhere('lastname','like','%' . $this->search . '%')
+                    ->orWhere('dni','like','%' . $this->search . '%')                
+                    ->orderBy($this->sort, $this->direction)
+                    ->paginate($this->cant);
         }else{
             $supervisors = [];
         }
-        return view('livewire.supervisor',compact('supervisors'));
+        return view('livewire.supervisor-livewire',compact('supervisors'));
     }
 
     public function order($sortWeb){

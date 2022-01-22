@@ -1,11 +1,11 @@
 <div>
     <x-jet-danger-button wire:click="$set('open',true)">
-        <i class="fas fa-user-plus"></i>&nbsp;&nbsp;Agregar Supervisor
+        <i class="fas fa-user-plus"></i>&nbsp;&nbsp;Agregar Votante
     </x-jet-danger-button>
 
     <x-jet-dialog-modal wire:model="open">
         <x-slot name="title">
-            Agregar información a la lista suprevisores
+            Agregar información a la lista Votantes
         </x-slot>
         <x-slot name="content">
             <div class="mb-4">
@@ -122,6 +122,17 @@
                         <label class="form-check-label inline-block text-gray-800" for="witness">Testigo</label>
                     </div>
                 </div>
+            </div>
+
+            <div class="mb-4">
+                <x-jet-label value="Escoja un Lider"></x-jet-label>
+                <select wire:model="lider_id" class="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
+                    <option value="" disabled selected>Escoje un Lider</option>
+                    @foreach($liders as $lider)
+                        <option value="{{ $lider->id }}">{{ $lider->firstname }} {{ $lider->lastname }}</option>
+                    @endforeach
+                </select>
+                <x-jet-input-error for="lider_id"></x-jet-input-error>
             </div>
             <div class="mb-4">
                 <x-jet-label value="Comentario"></x-jet-label>

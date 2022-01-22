@@ -1,11 +1,11 @@
 <div>
     <x-jet-danger-button wire:click="$set('open',true)">
-        <i class="fas fa-user-plus"></i>&nbsp;&nbsp;Agregar Supervisor
+        <i class="fas fa-user-plus"></i>&nbsp;&nbsp;Agregar Coordinador
     </x-jet-danger-button>
 
     <x-jet-dialog-modal wire:model="open">
         <x-slot name="title">
-            Agregar información a la lista suprevisores
+            Agregar información a la lista coordinadores
         </x-slot>
         <x-slot name="content">
             <div class="mb-4">
@@ -123,6 +123,17 @@
                     </div>
                 </div>
             </div>
+
+            <div class="mb-4">
+                <x-jet-label value="Supervisor"></x-jet-label>
+                <select wire:model="supervisor_id" class="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
+                    <option value="" disabled selected>Escoje un Supervisor</option>
+                    @foreach($supervisors as $supervisor)
+                        <option value="{{ $supervisor->id }}">{{ $supervisor->firstname }} {{ $supervisor->lastname }}</option>
+                    @endforeach
+                </select>
+                <x-jet-input-error for="supervisor_id"></x-jet-input-error>
+            </div>
             <div class="mb-4">
                 <x-jet-label value="Comentario"></x-jet-label>
                 <textarea wire:model="comment" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  rows="5"></textarea>
@@ -139,4 +150,5 @@
         </x-slot>
     </x-jet-dialog-modal>
 </div>
+
 
