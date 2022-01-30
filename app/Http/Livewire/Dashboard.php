@@ -13,6 +13,7 @@ class Dashboard extends Component
 {
     public function render()
     {
-        return view('livewire.dashboard');
+        $coordinators = Coordinator::all();
+        return view('livewire.dashboard', compact('coordinators'));
     }
 }
