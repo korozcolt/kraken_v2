@@ -14,6 +14,9 @@ class Dashboard extends Component
     public function render()
     {
         $coordinators = Coordinator::all();
-        return view('livewire.dashboard', compact('coordinators'));
+        $leaders = Lider::all();
+        $voters = Voter::all();
+
+        return view('livewire.dashboard', compact('coordinators','leaders','voters'));
     }
 }
