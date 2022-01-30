@@ -1,0 +1,482 @@
+[
+    {
+        "dni": 23175633,
+        "firstname": "JOVANA ESTHER",
+        "lastname": "CARRASCAL SIERRA",
+        "complete_name": "JOVANA ESTHER CARRASCAL SIERRA",
+        "phone": 3113436420,
+        "phone2": 3044747084,
+        "birthdate": "1981-05-20",
+        "address": "TRANSVERSAL 23B#23A68 LA MARIA"
+    },
+    {
+        "dni": 92505485,
+        "firstname": "OBER FRANCISCO",
+        "lastname": "SALCEDO ARROYO",
+        "complete_name": "OBER FRANCISCO SALCEDO ARROYO",
+        "phone": 3106577124,
+        "phone2": null,
+        "birthdate": "1983-08-12",
+        "address": "K 20 #16-40 FORD"
+    },
+    {
+        "dni": 92546229,
+        "firstname": "ELIECER ENRIQUE",
+        "lastname": "MARTELO BARRIOS",
+        "complete_name": "ELIECER ENRIQUE MARTELO BARRIOS",
+        "phone": 3126930381,
+        "phone2": null,
+        "birthdate": "1983-08-12",
+        "address": "CALLE 18#12C-06 20 DE JULIO"
+    },
+    {
+        "dni": 1102863528,
+        "firstname": "CRISTIAN JAVIER",
+        "lastname": "BLANQUICETH TAMARA",
+        "complete_name": "CRISTIAN JAVIER BLANQUICETH TAMARA",
+        "phone": 3128112351,
+        "phone2": 3128112351,
+        "birthdate": "1994-11-10",
+        "address": "CRA 6I # 27 A 11 NUEVO PIONEROS"
+    },
+    {
+        "dni": 1102795854,
+        "firstname": "OSNARDY ISABEL",
+        "lastname": "ACUÑA CARDALES",
+        "complete_name": "OSNARDY ISABEL ACUÑA CARDALES",
+        "phone": 3016208294,
+        "phone2": null,
+        "birthdate": "1984-10-24",
+        "address": "CR 31A CAL 23D - 39 LA TOSCANA"
+    },
+    {
+        "dni": 92538999,
+        "firstname": "CARLOS",
+        "lastname": "ROYET",
+        "complete_name": "CARLOS ROYET",
+        "phone": 3113014797,
+        "phone2": null,
+        "birthdate": "1981-12-28",
+        "address": "CR 6H N29-60 CORTIJO"
+    },
+    {
+        "dni": 92512087,
+        "firstname": "ODRIN",
+        "lastname": "BELLO OLIVEROS",
+        "complete_name": "ODRIN BELLO OLIVEROS",
+        "phone": 3002286446,
+        "phone2": 3024691830,
+        "birthdate": "1971-04-01",
+        "address": "K 15.#.6B.__. 15 SAN LUIS"
+    },
+    {
+        "dni": 64698128,
+        "firstname": "LEYLA PAOLA",
+        "lastname": "PEINADO DÍAZ",
+        "complete_name": "LEYLA PAOLA PEINADO DÍAZ",
+        "phone": 3045642030,
+        "phone2": null,
+        "birthdate": "1982-05-21",
+        "address": "CALLE 26 # 43 - 65 VENECIA"
+    },
+    {
+        "dni": 92642220,
+        "firstname": "ENOC MESAC",
+        "lastname": "ROMERO GONZÁLEZ",
+        "complete_name": "ENOC MESAC ROMERO GONZÁLEZ",
+        "phone": 3235275070,
+        "phone2": null,
+        "birthdate": "1985-08-16",
+        "address": "CALLE 25 BIS 9F -12 SEIS DE FEBRERO"
+    },
+    {
+        "dni": 92520568,
+        "firstname": "Holmes Augusto",
+        "lastname": "Gomez Palencia",
+        "complete_name": "HOLMES AUGUSTO GOMEZ PALENCIA",
+        "phone": 3022204787,
+        "phone2": 3114298715,
+        "birthdate": "1973-04-28",
+        "address": "CALLE 25, 23 A 16 CALLE CAUCA"
+    },
+    {
+        "dni": 64563069,
+        "firstname": "ROSIRIS DEL ROSARIO",
+        "lastname": "ACUÑA CONTRERAS",
+        "complete_name": "ROSIRIS DEL ROSARIO ACUÑA CONTRERAS",
+        "phone": 3102296610,
+        "phone2": null,
+        "birthdate": "1968-01-21",
+        "address": "CALLE 21B #10-170 KENNEDY"
+    },
+    {
+        "dni": 64555498,
+        "firstname": "ARMINDA",
+        "lastname": "MENDOZA",
+        "complete_name": "ARMINDA MENDOZA",
+        "phone": 3045467113,
+        "phone2": null,
+        "birthdate": "1965-12-03",
+        "address": "CARRERA 20 NO 16A 40 FORD"
+    },
+    {
+        "dni": 92526203,
+        "firstname": "JAVIER",
+        "lastname": "ACUÑA",
+        "complete_name": "JAVIER ACUÑA",
+        "phone": 3012263174,
+        "phone2": 3012263174,
+        "birthdate": "1983-08-12",
+        "address": "CRA17#25A_13 CALLE NARIÑO PABLO SEXTO"
+    },
+    {
+        "dni": 15620964,
+        "firstname": "FRANCISCO",
+        "lastname": "REALES LICONA",
+        "complete_name": "FRANCISCO REALES LICONA",
+        "phone": 3143356560,
+        "phone2": 3024405631,
+        "birthdate": "1980-06-26",
+        "address": "CALLE 18 #13-94 20 DE JULIO"
+    },
+    {
+        "dni": 92534068,
+        "firstname": "LEONARDO",
+        "lastname": "NOVA ROCHA",
+        "complete_name": "LEONARDO NOVA ROCHA",
+        "phone": 3005761506,
+        "phone2": 3024373846,
+        "birthdate": "1979-04-24",
+        "address": "CLL 17B # 26A 97 BOSQUE"
+    },
+    {
+        "dni": 92601854,
+        "firstname": "WILMER JOSE",
+        "lastname": "PATERNINA  GOMEZ",
+        "complete_name": "WILMER JOSE PATERNINA GOMEZ",
+        "phone": 3116169472,
+        "phone2": null,
+        "birthdate": "1980-02-04",
+        "address": "MANZANA3BLOQUE4TORRE2 ALTOS DELA SABANA"
+    },
+    {
+        "dni": 92527367,
+        "firstname": "OBER DAVID",
+        "lastname": "VERGARA ZARZA",
+        "complete_name": "OBER DAVID VERGARA ZARZA",
+        "phone": 3042734359,
+        "phone2": 3216778551,
+        "birthdate": "1976-09-07",
+        "address": "KRA 17#-7-36 VERSALLES"
+    },
+    {
+        "dni": 150444322,
+        "firstname": "MISAEL",
+        "lastname": "PASTRANA",
+        "complete_name": "MISAEL PASTRANA",
+        "phone": 30536004231,
+        "phone2": 3026253045,
+        "birthdate": "1965-10-22",
+        "address": "CALLE 16C#13 20 DE JULIO"
+    },
+    {
+        "dni": 92503081,
+        "firstname": "CESAR AUGUSTO",
+        "lastname": "CARRDALES CORREA",
+        "complete_name": "CESAR AUGUSTO CARRDALES CORREA",
+        "phone": 3114076509,
+        "phone2": null,
+        "birthdate": "1964-05-15",
+        "address": "CALLE 37B#4C49 20 DE ENERO"
+    },
+    {
+        "dni": 92522586,
+        "firstname": "ROBINSO",
+        "lastname": "GOMEZ LADEUS",
+        "complete_name": "ROBINSO GOMEZ LADEUS",
+        "phone": 3046107741,
+        "phone2": 3046107741,
+        "birthdate": "1973-11-15",
+        "address": "CALLE 15#12A80 SANTA MARIA"
+    },
+    {
+        "dni": 92694024,
+        "firstname": "oswaldo jose",
+        "lastname": "arroyo guevara",
+        "complete_name": "OSWALDO JOSE ARROYO GUEVARA",
+        "phone": 3234948361,
+        "phone2": 3122985083,
+        "birthdate": "1984-09-24",
+        "address": "SABANAS DEL POTRERO SABANAS DEL POTRERO"
+    },
+    {
+        "dni": 92528032,
+        "firstname": "OSNAR CARLOS",
+        "lastname": "ACUÑA CARDALES",
+        "complete_name": "OSNAR CARLOS ACUÑA CARDALES",
+        "phone": 3156214915,
+        "phone2": null,
+        "birthdate": "1976-08-05",
+        "address": "QUINTAS DE LA PALMA CASA 2A LA PALMA"
+    },
+    {
+        "dni": 18778361,
+        "firstname": "ISAAC ENRIQUE",
+        "lastname": "REVOLLEDO BARRIOS",
+        "complete_name": "ISAAC ENRIQUE REVOLLEDO BARRIOS",
+        "phone": 3106305420,
+        "phone2": 3012825149,
+        "birthdate": "1982-02-19",
+        "address": "CALLE 24 # 4 - 57 LA SELVA"
+    },
+    {
+        "dni": 92512237,
+        "firstname": "JOSÉ JAVIER",
+        "lastname": "SARMIENTO",
+        "complete_name": "JOSÉ JAVIER SARMIENTO",
+        "phone": 3016390953,
+        "phone2": null,
+        "birthdate": "1969-06-05",
+        "address": "CARRERA 6H # 26-53 EL CORTIJO"
+    },
+    {
+        "dni": 92536126,
+        "firstname": "EDIL ALBERTO",
+        "lastname": "TAPIA BAZA",
+        "complete_name": "EDIL ALBERTO TAPIA BAZA",
+        "phone": 3185506339,
+        "phone2": 3016756546,
+        "birthdate": "1980-02-03",
+        "address": "CLL 23D 8-26 CAMILO TORRES"
+    },
+    {
+        "dni": 64699420,
+        "firstname": "YACIRA",
+        "lastname": "AGUDELO GRACIA",
+        "complete_name": "YACIRA AGUDELO GRACIA",
+        "phone": 3203959413,
+        "phone2": 3187611417,
+        "birthdate": "1981-08-31",
+        "address": "KRA 12A # 25A - 04 CIUDADELA SUIZA"
+    },
+    {
+        "dni": 1137195081,
+        "firstname": "CESAR AUGUSTO",
+        "lastname": "PUENTES GUTIERREZ",
+        "complete_name": "CESAR AUGUSTO PUENTES GUTIERREZ",
+        "phone": 3133911289,
+        "phone2": 3042817849,
+        "birthdate": "1985-05-05",
+        "address": "CLL5B6A#19 MIRADOR"
+    },
+    {
+        "dni": 92530090,
+        "firstname": "EFRAIN ALBERTO",
+        "lastname": "BUITRAGO TAPIA",
+        "complete_name": "EFRAIN ALBERTO BUITRAGO TAPIA",
+        "phone": 3233907069,
+        "phone2": null,
+        "birthdate": "1977-07-04",
+        "address": "C27 # 11/12 RITA DE ARRAZOLA"
+    },
+    {
+        "dni": 64541470,
+        "firstname": "YENNY ISABEL",
+        "lastname": "BALLUT PESTANA",
+        "complete_name": "YENNY ISABEL BALLUT PESTANA",
+        "phone": 3017985234,
+        "phone2": null,
+        "birthdate": "1958-08-15",
+        "address": "CALLE 17 # 11-12 KENNEDY"
+    },
+    {
+        "dni": 92532646,
+        "firstname": "DARWIN DAVID",
+        "lastname": "LLORENTE ROMERO",
+        "complete_name": "DARWIN DAVID LLORENTE ROMERO",
+        "phone": 3014565019,
+        "phone2": 3205290250,
+        "birthdate": "1978-09-06",
+        "address": "CRA 15C NO 7.45 VERSALLES"
+    },
+    {
+        "dni": 92553287,
+        "firstname": "AGUSTIN",
+        "lastname": "ROMERO300",
+        "complete_name": "AGUSTIN ROMERO300",
+        "phone": 3007741375,
+        "phone2": null,
+        "birthdate": "1970-07-20",
+        "address": "CRA 14C SANLUIS"
+    },
+    {
+        "dni": 92527122,
+        "firstname": "JOSE ANTONIO",
+        "lastname": "GÓMEZ FLOREZ",
+        "complete_name": "JOSE ANTONIO GÓMEZ FLOREZ",
+        "phone": 3112560691,
+        "phone2": 3112560691,
+        "birthdate": "1976-06-14",
+        "address": "CRA 33#12-42 PORVENIR"
+    },
+    {
+        "dni": 80057515,
+        "firstname": "HENRY JOSE",
+        "lastname": "SALCEDO",
+        "complete_name": "HENRY JOSE SALCEDO",
+        "phone": 3135452921,
+        "phone2": null,
+        "birthdate": "1980-06-24",
+        "address": "CRA 22E #33-112 AV LA PAZ"
+    },
+    {
+        "dni": 1102795657,
+        "firstname": "OMAR DE JESÚS",
+        "lastname": "OCHOA GARCIA",
+        "complete_name": "OMAR DE JESÚS OCHOA GARCIA",
+        "phone": 3043876102,
+        "phone2": null,
+        "birthdate": "1986-01-12",
+        "address": "CARRERA 29 # 19 - 50 DULCE NOMBRE"
+    },
+    {
+        "dni": 1102817939,
+        "firstname": "ARTHURASTUNES COIMBRA",
+        "lastname": "GUERRA YANES",
+        "complete_name": "ARTHURASTUNES COIMBRA GUERRA YANES",
+        "phone": 3043969601,
+        "phone2": 3002199031,
+        "birthdate": "1988-06-28",
+        "address": "CALLE 7# 15D 65 VERSALLES"
+    },
+    {
+        "dni": 98570699,
+        "firstname": "CARLOS ALBERTO",
+        "lastname": "PATIÑO MORALES",
+        "complete_name": "CARLOS ALBERTO PATIÑO MORALES",
+        "phone": 3102777718,
+        "phone2": 3015115299,
+        "birthdate": "1975-03-27",
+        "address": "CARRERA 16 N 36-41 LAS MERCEDES"
+    },
+    {
+        "dni": 64584658,
+        "firstname": "DIANA",
+        "lastname": "ZUÑIGA DE LA OSSA",
+        "complete_name": "DIANA ZUÑIGA DE LA OSSA",
+        "phone": 3002378360,
+        "phone2": null,
+        "birthdate": "1979-05-07",
+        "address": "KRA 8 #23B 106 PROVIDENCIA"
+    },
+    {
+        "dni": 92544672,
+        "firstname": "ALDEMAR",
+        "lastname": "ALFARO",
+        "complete_name": "ALDEMAR ALFARO",
+        "phone": 3017692120,
+        "phone2": null,
+        "birthdate": "1982-11-19",
+        "address": "CALLE 26 NO 16A 73 SÁBANAS DE NARIÑO"
+    },
+    {
+        "dni": 92531625,
+        "firstname": "EDUARDO",
+        "lastname": "SANTOS",
+        "complete_name": "EDUARDO SANTOS",
+        "phone": 30156592571,
+        "phone2": null,
+        "birthdate": "1983-08-12",
+        "address": "CLL24C#740L LA SELVA"
+    },
+    {
+        "dni": 92536601,
+        "firstname": "EDER LUIS",
+        "lastname": "HERRERA PATERNINA",
+        "complete_name": "EDER LUIS HERRERA PATERNINA",
+        "phone": 3014102367,
+        "phone2": 3017119908,
+        "birthdate": "1980-04-26",
+        "address": "CRA 10 A #22 D - 05 EL PINAR"
+    },
+    {
+        "dni": 1102864884,
+        "firstname": "YAIR",
+        "lastname": "RIOS",
+        "complete_name": "YAIR RIOS",
+        "phone": 3233277045,
+        "phone2": null,
+        "birthdate": "1995-02-03",
+        "address": "CALLE 10 #23E-24 LA PALMA"
+    },
+    {
+        "dni": 64568652,
+        "firstname": "MONICA LUJÁN",
+        "lastname": "PEREZ VIDES",
+        "complete_name": "MONICA LUJÁN PEREZ VIDES",
+        "phone": 3116641919,
+        "phone2": 3007861446,
+        "birthdate": "1983-08-12",
+        "address": "CR22E CL 33-48 BUENOS AIRES"
+    },
+    {
+        "dni": 64699484,
+        "firstname": "LILIANA PAOLA",
+        "lastname": "DIAZ TORRES",
+        "complete_name": "LILIANA PAOLA DIAZ TORRES",
+        "phone": 3017590451,
+        "phone2": null,
+        "birthdate": "1982-02-12",
+        "address": "KRA 13 D #21-55 LOS LIBERTADORES"
+    },
+    {
+        "dni": 6820667,
+        "firstname": "ERNESTO MANUEL",
+        "lastname": "CONTRERAS BARRIOS",
+        "complete_name": "ERNESTO MANUEL CONTRERAS BARRIOS",
+        "phone": 3232997518,
+        "phone2": 3005547941,
+        "birthdate": "1957-10-28",
+        "address": "CALLE 18#13C16 LOS LIBERTADORES"
+    },
+    {
+        "dni": 92534610,
+        "firstname": "VICTOR JULIO",
+        "lastname": "PATERNINA CANCHILA",
+        "complete_name": "VICTOR JULIO PATERNINA CANCHILA",
+        "phone": 3005979191,
+        "phone2": null,
+        "birthdate": "1978-06-23",
+        "address": "KR 5B 3B # 29 DIVINO SALVADOR"
+    },
+    {
+        "dni": 64476324,
+        "firstname": "MERY SOFIAVALES",
+        "lastname": "VALETA MARTÍNEZ",
+        "complete_name": "MERY SOFIAVALES VALETA MARTÍNEZ",
+        "phone": 3106369331,
+        "phone2": 3008404449,
+        "birthdate": "1967-06-09",
+        "address": "CALLE 36A NO 15 50 LA NARCIZA"
+    },
+    {
+        "dni": 327795,
+        "firstname": "LUIS BERNARDO",
+        "lastname": "GARCÍA  ENRIQUEZ",
+        "complete_name": "LUIS BERNARDO GARCÍA ENRIQUEZ",
+        "phone": 3002533283,
+        "phone2": 3007247848,
+        "birthdate": "1966-08-20",
+        "address": "CALLE 42F 18F 54 DIVINO NIÑO"
+    },
+    {
+        "dni": 92534448,
+        "firstname": "IVAN ESTEBAN",
+        "lastname": "CHIMA RODRIGUEZ",
+        "complete_name": "IVAN ESTEBAN CHIMA RODRIGUEZ",
+        "phone": 3044756853,
+        "phone2": null,
+        "birthdate": "1974-01-01",
+        "address": "CR 3 9-103 LOS LAURELES"
+    }
+]

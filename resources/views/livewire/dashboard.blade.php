@@ -1,6 +1,6 @@
 <div>
     <section>
-        <div id="main" class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5" wire:poll.2s>       
+        <div id="main" class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">       
             <div class="flex flex-wrap">
                 <div class="w-full md:w-1/2 xl:w-1/3 p-6">
                     <!--Metric Card-->
@@ -11,7 +11,7 @@
                             </div>
                             <div class="flex-1 text-right md:text-center">
                                 <h2 class="font-bold uppercase text-gray-600">Total Aptos Ingresados</h2>
-                               <p class="font-bold text-3xl">{{ now() }} <span class="text-green-500"><i class="fas fa-caret-up"></i></span></p>
+                               <p class="font-bold text-3xl">0 <span class="text-green-500"><i class="fas fa-caret-up"></i></span></p>
                             </div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                             </div>
                             <div class="flex-1 text-right md:text-center">
                                 <h2 class="font-bold uppercase text-gray-600">Total No Aptos</h2>
-                                <p class="font-bold text-3xl">249 <span class="text-pink-500"><i class="fas fa-exchange-alt"></i></span></p>
+                                <p class="font-bold text-3xl">0 <span class="text-pink-500"><i class="fas fa-exchange-alt"></i></span></p>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                             </div>
                             <div class="flex-1 text-right md:text-center">
                                 <h2 class="font-bold uppercase text-gray-600">NUEVOS SIMPATIZANTES</h2>
-                                <p class="font-bold text-3xl">2 <span class="text-yellow-600"><i class="fas fa-caret-up"></i></span></p>
+                                <p class="font-bold text-3xl">0 <span class="text-yellow-600"><i class="fas fa-caret-up"></i></span></p>
                             </div>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                             </div>
                             <div class="flex-1 text-right md:text-center">
                                 <h2 class="font-bold uppercase text-gray-600">Lideres</h2>
-                                <p class="font-bold text-3xl">152 days</p>
+                                <p class="font-bold text-3xl">0</p>
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                             </div>
                             <div class="flex-1 text-right md:text-center">
                                 <h2 class="font-bold uppercase text-gray-600">Coordinadores</h2>
-                                <p class="font-bold text-3xl">7 tasks</p>
+                                <p class="font-bold text-3xl">{{ $coordinators ? $coordinators->count() : 0 }}</p>
                             </div>
                         </div>
                     </div>
