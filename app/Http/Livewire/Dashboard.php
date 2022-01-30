@@ -17,6 +17,7 @@ class Dashboard extends Component
         $leaders = Lider::all();
         $voters = Voter::all();
 
+
         return view('livewire.dashboard', compact('coordinators','leaders','voters'));
     }
 }
