@@ -41,7 +41,7 @@
                             </div>
                             <div class="flex-1 text-right md:text-center">
                                 <h2 class="font-bold uppercase text-gray-600">NUEVOS SIMPATIZANTES</h2>
-                                <p class="font-bold text-3xl">0 <span class="text-yellow-600"><i class="fas fa-caret-up"></i></span></p>
+                                <p class="font-bold text-3xl">{{ $voters ? $voters : 0 }} <span class="text-yellow-600"><i class="fas fa-caret-up"></i></span></p>
                             </div>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                             </div>
                             <div class="flex-1 text-right md:text-center">
                                 <h2 class="font-bold uppercase text-gray-600">Lideres</h2>
-                                <p class="font-bold text-3xl">0</p>
+                                <p class="font-bold text-3xl">{{ $leaders ? $leaders : 0 }}</p>
                             </div>
                         </div>
                     </div>
@@ -86,7 +86,7 @@
                             </div>
                             <div class="flex-1 text-right md:text-center">
                                 <h2 class="font-bold uppercase text-gray-600">Duplicados</h2>
-                                <p class="font-bold text-3xl">3 <span class="text-red-500"><i class="fas fa-caret-up"></i></span></p>
+                                <p class="font-bold text-3xl">0 <span class="text-red-500"><i class="fas fa-caret-up"></i></span></p>
                             </div>
                         </div>
                     </div>
