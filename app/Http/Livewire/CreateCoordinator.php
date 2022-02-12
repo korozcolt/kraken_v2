@@ -15,6 +15,7 @@ class CreateCoordinator extends Component
     public $firstname, $lastname, $dni, $phone, $phone_two, $address, $birthdate, $son_number, $status,  $city_id, $guide, $witness, $comment, $gender, $supervisor_id;
     public $states;
     public $cities;
+    public $supervisors;
 
     public $selectedState = null;
     public $selectedCity = null;
@@ -24,6 +25,7 @@ class CreateCoordinator extends Component
         $this->states = State::all();
         $this->cities = collect();
         $this->selectedCity = null;
+        $this->supervisors = Supervisor::all();
 
         if(!is_null($this->selectedCity)){
             $city = City::where('state_id', $this->selectedState)->get();
@@ -63,17 +65,19 @@ class CreateCoordinator extends Component
 
     public function updatedSelectedState($state)
     {
+        
         if (!is_null($state)) {
             $this->cities = City::where('state_id', $state)->get();
         }
     }
 
     public function render(){
-        $supervisors = Supervisor::all();
-        return view('livewire.create-coordinator',compact('supervisors'));
+        
+        return view('livewire.create-coordinator');
     }
 
     public function save(){
+        //dd($this->supervisor_id);
         $this->validate();
         Coordinator::create([
             'firstname' => strtoupper($this->firstname),
