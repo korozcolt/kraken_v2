@@ -45,21 +45,7 @@
             </div>
             <div class="mb-4">
                 <x-jet-label for="state">{{ __('Departamento') }}</x-jet-label>
-                <select wire:model="selectedState" class="form-select appearance-none
-                block
-                w-full
-                px-3
-                py-1.5
-                text-base
-                font-normal
-                text-gray-700
-                bg-white bg-clip-padding bg-no-repeat
-                border border-solid border-gray-300
-                rounded
-                transition
-                ease-in-out
-                m-0
-                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
+                <select wire:model="selectedState" class="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
                     <option value="" selected>Escoje un Departamento</option>
                     @foreach($states as $state)
                         <option value="{{ $state->id }}">{{ $state->name }}</option>
@@ -71,20 +57,7 @@
             @if (!is_null($selectedState))
                 <div class="mb-4">
                     <x-jet-label for="city">{{ __('Ciudad') }}</x-jet-label>
-                    <select wire:model="selectedCity" class="form-select appearance-none
-                    block
-                    w-full
-                    px-3
-                    py-1.5
-                    text-base
-                    font-normal
-                    text-gray-700
-                    bg-white bg-clip-padding bg-no-repeat
-                    border border-solid border-gray-300
-                    rounded
-                    transition
-                    ease-in-out
-                    m-0
+                    <select wire:model="selectedCity" class="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0
                     focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" name="city_id">
                         <option value="" selected>Escoje una ciudad</option>
                         @foreach($cities as $city)
@@ -126,8 +99,8 @@
 
             <div class="mb-4">
                 <x-jet-label value="Supervisor"></x-jet-label>
-                <select wire:model="supervisor_id" class="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
-                    <option value="" disabled selected>Escoje un Supervisor</option>
+                <select wire:model.defer="supervisor_id" name="supervisor_id" class="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
+                    <option value="" disabled>Escoje un Supervisor</option>
                     @foreach($supervisors as $supervisor)
                         <option value="{{ $supervisor->id }}">{{ $supervisor->firstname }} {{ $supervisor->lastname }}</option>
                     @endforeach

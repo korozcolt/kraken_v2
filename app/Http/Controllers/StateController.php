@@ -14,4 +14,5 @@ class StateController extends Controller
     public function getState($id){
         return State::where('id',$id)->first();
     }
+
 }
