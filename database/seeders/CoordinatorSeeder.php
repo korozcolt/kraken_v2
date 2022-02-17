@@ -25,12 +25,12 @@ class CoordinatorSeeder extends Seeder
         foreach ($coordinators as $key => $value){
             Coordinator::create([
                 'dni' => $value->dni,
-                'firstname' => $value->firstname,
-                'lastname' => $value->lastname,
-                'complete_name' => $value->complete_name,
+                'firstname' => strtoupper($value->firstname),
+                'lastname' => strtoupper($value->lastname),
+                'complete_name' => strtoupper($value->complete_name),
                 'phone' => $value->phone,
                 'phone_two' => $value->phone2,
-                'address' => $value->address,
+                'address' => strtoupper($value->address),
                 'birthdate' => $value->birthdate,
                 'supervisor_id' => $supervisor->id,
                 'city_id' => 70001,

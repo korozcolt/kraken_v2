@@ -95,7 +95,7 @@
                                                 <td class="px-4 py-3 border">
                                                     <div class="flex items-center text-sm">
                                                         <div>
-                                                            <p class="font-semibold text-black">{{ $value->firstname}} {{ $value->lastname}}</p>
+                                                            <p class="font-semibold text-black">{{ $value->complete_name }}</p>
                                                         </div>
                                                     </div>
                                                 </td>
