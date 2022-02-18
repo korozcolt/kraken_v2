@@ -40,10 +40,9 @@ class CreateCoordinator extends Component
         'firstname' => 'required|max:50',
         'lastname' => 'required|max:50',
         'dni' => 'numeric|required|unique:supervisors,dni',
-        'phone' => 'numeric|required',
+        'phone' => 'numeric',
         'phone_two' => 'numeric|nullable',
         'address' => 'nullable|max:100',
-        'birthdate' => 'required',
         'son_number' => 'numeric|nullable',
         'comment' => 'nullable|max:255', 
     ];
@@ -54,11 +53,9 @@ class CreateCoordinator extends Component
         'dni.unique' => 'Este número ya se encuentra en uso',
         'dni.numeric' => 'La cedula debe ser un numero sin letras o caracteres',
         'dni.required' => 'La cedula es campo obligatorio',
-        'phone.required' => 'Teléfono requerido',
         'phone.numeric' => 'El teléfono debe ser un numero sin letras o caracteres',
         'phone_two.numeric' => 'El teléfono debe ser un numero sin letras o caracteres',
         'address.max' => 'La dirección no debe exceder los 100 caracteres',
-        'birthdate.required' => 'La fecha debe ser una fecha valida',
         'son_number.numeric' => 'El número de hijos debe ser un numero sin letras o caracteres',
         'comment.max' => 'El comentario no debe exceder los 255 caracteres'
     ];

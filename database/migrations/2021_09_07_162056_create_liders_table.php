@@ -19,7 +19,7 @@ class CreateLidersTable extends Migration
             $table->string('lastname');
             $table->string('complete_name');
             $table->bigInteger('dni');
-            $table->double('phone');
+            $table->double('phone')->nullable()->default(0);
             $table->double('phone_two')->nullable()->default(0);
             $table->string('address')->nullable();
             $table->date('birthdate')->nullable();
