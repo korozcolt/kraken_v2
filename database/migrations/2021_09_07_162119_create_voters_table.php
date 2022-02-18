@@ -17,7 +17,7 @@ class CreateVotersTable extends Migration
             $table->id();
             $table->string('firstname');
             $table->string('lastname');
-            $table->string('complete_name');
+            $table->string('complete_name')->nullable();
             $table->bigInteger('dni');
             $table->double('phone')->nullable()->default(0);
             $table->double('phone_two')->nullable()->default(0);
