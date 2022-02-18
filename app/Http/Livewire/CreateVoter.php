@@ -79,6 +79,7 @@ class CreateVoter extends Component
         Voter::create([
             'firstname' => strtoupper($this->firstname),
             'lastname' => strtoupper($this->lastname),
+            'complete_name' => strtoupper($this->firstname.' '.$this->lastname),
             'dni' => $this->dni,
             'phone' => $this->phone,
             'phone_two' => $this->phone_two,
