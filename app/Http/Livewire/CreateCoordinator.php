@@ -93,7 +93,7 @@ class CreateCoordinator extends Component
             'comment' => $this->comment,
             'gender' => $this->gender,
             'user_id'=> \Auth::id(),
-            'supervisor_id'=> $this->supervisor_id,
+            'supervisor_id'=> 1,
         ]);
         $this->reset([
             'open','firstname','lastname','phone','phone_two','address','birthdate','son_number','status','city_id','guide','witness','comment','gender'
