@@ -51,7 +51,6 @@ class CreateSupervisor extends Component
         'lastname.required' => 'Apellido requerido',
         'dni.unique' => 'Este número ya se encuentra en uso',
         'dni.numeric' => 'La cedula debe ser un numero sin letras o caracteres',
-        'dni.required' => 'La cedula es campo obligatorio',
         'phone.required' => 'Teléfono requerido',
         'phone.numeric' => 'El teléfono debe ser un numero sin letras o caracteres',
         'phone_two.numeric' => 'El teléfono debe ser un numero sin letras o caracteres',
