@@ -14,7 +14,7 @@ use Livewire\Component;
 class CreateLider extends Component
 {
     public $open = false;
-    public $firstname, $lastname, $dni, $phone, $phone_two, $address, $birthdate, $son_number, $status,  $city_id, $guide, $witness, $comment, $gender, $coordinator_id;
+    public $firstname, $complete_name, $lastname, $dni, $phone, $phone_two, $address, $birthdate, $son_number, $status,  $city_id, $guide, $witness, $comment, $gender, $coordinator_id;
     public $states;
     public $cities;
 
@@ -74,11 +74,12 @@ class CreateLider extends Component
     }
 
     public function save(){
+        $this->complete_name = $this->firstname . ' ' . $this->lastname;
         $this->validate();
         Lider::create([
             'firstname' => strtoupper($this->firstname),
             'lastname' => strtoupper($this->lastname),
-            'complete_name' => strtoupper($this->firstname.' '.$this->lastname),
+            'complete_name' =>  strtoupper($this->complete_name),
             'dni' => $this->dni,
             'phone' => $this->phone,
             'phone_two' => $this->phone_two,
