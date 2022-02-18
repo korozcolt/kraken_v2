@@ -39,7 +39,7 @@ class CreateCoordinator extends Component
     protected $rules = [
         'firstname' => 'required|max:50',
         'lastname' => 'required|max:50',
-        'dni' => 'numeric|required|unique:supervisors,dni',
+        'dni' => 'numeric|required|unique:coordinators,dni',
         'phone' => 'numeric',
         'phone_two' => 'numeric|nullable',
         'address' => 'nullable|max:100',
