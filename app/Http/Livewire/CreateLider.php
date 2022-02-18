@@ -39,7 +39,7 @@ class CreateLider extends Component
     protected $rules = [
         'firstname' => 'required|max:50',
         'lastname' => 'required|max:50',
-        'dni' => 'numeric|required|unique:supervisors,dni',
+        'dni' => 'numeric|required|unique:liders,dni',
         'phone' => 'numeric|nullable',
         'phone_two' => 'numeric|nullable',
         'address' => 'nullable|max:100',
