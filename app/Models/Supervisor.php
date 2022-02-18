@@ -19,6 +19,11 @@ class Supervisor extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function getCompleteNameAttribute()
+    {
+        return "{$this->firstname} {$this->lastname}";
+    }
+
     public function liderExists(){
         $user = Lider::where('dni',$this->dni)->first();
         if($user){

@@ -27,7 +27,6 @@ class CoordinatorSeeder extends Seeder
                 'dni' => $value->dni,
                 'firstname' => strtoupper($value->firstname),
                 'lastname' => strtoupper($value->lastname),
-                'complete_name' => strtoupper($value->complete_name),
                 'phone' => $value->phone,
                 'phone_two' => $value->phone2,
                 'address' => strtoupper($value->address),

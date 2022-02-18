@@ -21,7 +21,10 @@ class Voter extends Model
     {
         return $this->belongsTo(Lider::class);
     }
-
+    public function getCompleteNameAttribute()
+    {
+        return "{$this->firstname} {$this->lastname}";
+    }
     public function coordinator(){
         return $this->hasManyThrough(Coordinator::class, Lider::class);
     }

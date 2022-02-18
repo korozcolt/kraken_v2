@@ -17,6 +17,11 @@ class Lider extends Model
         'call_status','place','table','gender'
     ];
 
+    public function getCompleteNameAttribute()
+    {
+        return "{$this->firstname} {$this->lastname}";
+    }
+
     public function coordinator()
     {
         return $this->belongsTo(Coordinator::class);

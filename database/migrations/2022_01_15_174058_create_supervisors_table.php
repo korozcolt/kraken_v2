@@ -17,7 +17,6 @@ class CreateSupervisorsTable extends Migration
             $table->id();
             $table->string('firstname');
             $table->string('lastname');
-            $table->string('complete_name');
             $table->bigInteger('dni');
             $table->double('phone');
             $table->double('phone_two')->nullable()->default(0);

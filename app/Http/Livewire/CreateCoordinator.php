@@ -12,7 +12,7 @@ use Carbon\Carbon;
 class CreateCoordinator extends Component
 {
     public $open = false;
-    public $firstname, $lastname, $complete_name, $dni, $phone, $phone_two, $address, $birthdate, $son_number, $status,  $city_id, $guide, $witness, $comment, $gender, $supervisor_id;
+    public $firstname, $lastname, $dni, $phone, $phone_two, $address, $birthdate, $son_number, $status,  $city_id, $guide, $witness, $comment, $gender, $supervisor_id;
     public $states;
     public $cities;
     public $supervisors;
@@ -74,13 +74,13 @@ class CreateCoordinator extends Component
     }
 
     public function save(){
-        $this->complete_name = $this->firstname . ' ' . $this->lastname;
+        
         //dd($this->supervisor_id);
         $this->validate();
+        //$this->complete_name = $this->firstname . ' ' . $this->lastname;
         Coordinator::create([
             'firstname' => strtoupper($this->firstname),
             'lastname' => strtoupper($this->lastname),
-            'complete_name' => strtoupper($this->complete_name),
             'dni' => $this->dni,
             'phone' => $this->phone,
             'phone_two' => $this->phone_two,
