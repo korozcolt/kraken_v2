@@ -21,7 +21,6 @@ class SupervisorSeeder extends Seeder
             'dni' => '1102812122',
             'firstname' => 'KRISTIAN',
             'lastname' => 'OROZCO',
-            'complete_name' => 'KRISTIAN OROZCO',
             'phone' => '3016859339',
             'phone_two' => '3016859339',
             'address' => 'CALLE 23 #13C 96 APTO 201',

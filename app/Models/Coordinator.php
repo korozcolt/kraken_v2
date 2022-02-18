@@ -21,6 +21,11 @@ class Coordinator extends Model
         return $this->belongsTo(Supervisor::class);
     }
 
+    public function getCompleteNameAttribute()
+    {
+        return "{$this->firstname} {$this->lastname}";
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);

@@ -59,6 +59,11 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+    public function getCompleteNameAttribute()
+    {
+        return "{$this->firstname} {$this->lastname}";
+    }
+
     public function voter(){
         return $this->hasMany(Voter::class);
     }
