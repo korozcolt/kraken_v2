@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Lider;
-use App\Models\Voter;
+use App\Models\Voter01;
 use App\Models\Censo;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -53,7 +53,7 @@ class VoterLivewire extends Component
     ];
 
     public function mount(){
-        $this->voter = new Voter();
+        $this->voter = new Voter01();
     }
 
     public function loadVoter(){
@@ -66,10 +66,11 @@ class VoterLivewire extends Component
     public function render()
     {
         if($this->readyToLoad){
-            $voters = voter::where('firstname','like','%' . $this->search . '%')
+            $voters = Voter01::select('dni','id','firstname','lastname','phone','address','lider_dni','coordinator_dni','status')
+                ->where('firstname','like','%' . $this->search . '%')
                 ->orWhere('lastname','like','%' . $this->search . '%')
                 ->orWhere('dni','LIKE',$this->search)
-                ->orderBy($this->sort, $this->direction)
+                ->distinct('dni')
                 ->paginate($this->cant);
         }else{
             $voters = [];
@@ -88,17 +89,17 @@ class VoterLivewire extends Component
         }else{$this->sort = $sortWeb;$this->direction = 'asc';}
     }
 
-    public function edit(Voter $voter){
+    public function edit(Voter01 $voter){
         $this->voter = $voter;
         $this->open_edit = true;
     }
 
-    public function status_update(Voter $voter){
+    public function status_update(Voter01 $voter){
         $this->voter = $voter;
         $this->open_status = true;
     }
 
-    public function updateCall(Voter $voter){
+    public function updateCall(Voter01 $voter){
         $this->validate();
         $this->voter->save();
         $this->reset(['open_status']);

@@ -20,7 +20,13 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             SupervisorSeeder::class,
             CoordinatorSeeder::class,
-            Lider01Seeder::class,
+            //Lider01Seeder::class,
+            Voter01Seerder::class,
+            Voter02Seerder::class,
+            Voter11Seerder::class,
+            Voter21Seerder::class,
+            Voter03Seerder::class,
+            
         ]);
     }
 }
