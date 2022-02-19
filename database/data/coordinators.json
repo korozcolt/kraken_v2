@@ -478,5 +478,75 @@
         "phone2": null,
         "birthdate": "1974-01-01",
         "address": "CR 3 9-103 LOS LAURELES"
+    },
+    {
+        "dni": 78019494,
+        "firstname": "URIEL ENRIQUE",
+        "lastname": "REQUENA ORTEGA",
+        "complete_name": "IVAN ESTEBAN CHIMA RODRIGUEZ",
+        "phone": 3135882979,
+        "phone2": null,
+        "birthdate": "1974-01-01",
+        "address": "CR 3 9-103 LOS LAURELES"
+    },
+    {
+        "dni": 92553139,
+        "firstname": "LEONARDO ANTONIO",
+        "lastname": "GRILLO MARTINEZ",
+        "complete_name": "IVAN ESTEBAN CHIMA RODRIGUEZ",
+        "phone": 3135882979,
+        "phone2": null,
+        "birthdate": "1974-01-01",
+        "address": "CR 3 9-103 LOS LAURELES"
+    },
+    {
+        "dni": 92534575,
+        "firstname": "DINELSON IVAN",
+        "lastname": "ACOSTA MARQUEZ",
+        "complete_name": "IVAN ESTEBAN CHIMA RODRIGUEZ",
+        "phone": 3135882979,
+        "phone2": null,
+        "birthdate": "1974-01-01",
+        "address": "CR 3 9-103 LOS LAURELES"
+    },
+    {
+        "dni": 92534575,
+        "firstname": "SEBASTIAN",
+        "lastname": "PATERNINA COHEN",
+        "complete_name": "IVAN ESTEBAN CHIMA RODRIGUEZ",
+        "phone": 3135882979,
+        "phone2": null,
+        "birthdate": "1974-01-01",
+        "address": "CR 3 9-103 LOS LAURELES"
+    },
+    {
+        "dni": 1102834949,
+        "firstname": "JOSÉ DAVID",
+        "lastname": "FIGUEREDO VILLACOB",
+        "complete_name": "IVAN ESTEBAN CHIMA RODRIGUEZ",
+        "phone": 3135882979,
+        "phone2": null,
+        "birthdate": "1974-01-01",
+        "address": "CR 3 9-103 LOS LAURELES"
+    },
+    {
+        "dni": 71336238,
+        "firstname": "CARLOS MARIO",
+        "lastname": "PARRA MONTERROZA",
+        "complete_name": "IVAN ESTEBAN CHIMA RODRIGUEZ",
+        "phone": 3135882979,
+        "phone2": null,
+        "birthdate": "1974-01-01",
+        "address": "CR 3 9-103 LOS LAURELES"
+    },
+    {
+        "dni": 64568172,
+        "firstname": "SALUA YALILE",
+        "lastname": "ISAAC TATIS",
+        "complete_name": "IVAN ESTEBAN CHIMA RODRIGUEZ",
+        "phone": 3135882979,
+        "phone2": null,
+        "birthdate": "1974-01-01",
+        "address": "CR 3 9-103 LOS LAURELES"
     }
 ]
