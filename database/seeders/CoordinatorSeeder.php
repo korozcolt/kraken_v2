@@ -18,7 +18,7 @@ class CoordinatorSeeder extends Seeder
     {
         Coordinator::truncate();
 
-        $json = File::get('database/data/coordinators.json');
+        $json = File::get('database/data/coordinadores_final.json');
         $coordinators = json_decode($json);
         $supervisor = Supervisor::where('dni','1102812122')->first();
 
@@ -28,9 +28,9 @@ class CoordinatorSeeder extends Seeder
                 'firstname' => strtoupper($value->firstname),
                 'lastname' => strtoupper($value->lastname),
                 'phone' => $value->phone,
-                'phone_two' => $value->phone2,
-                'address' => strtoupper($value->address),
-                'birthdate' => $value->birthdate,
+                'phone_two' => 0,
+                'address' => 'SINCELEJO',
+                'birthdate' => '1990-01-01',
                 'supervisor_id' => $supervisor->id,
                 'city_id' => 70001,
                 'user_id' => $supervisor->user_id,
