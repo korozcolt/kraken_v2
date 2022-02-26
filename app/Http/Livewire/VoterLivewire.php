@@ -7,6 +7,7 @@ use App\Models\Voter01;
 use App\Models\Censo;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Auth;
 
 class VoterLivewire extends Component
 {
@@ -30,22 +31,14 @@ class VoterLivewire extends Component
     ];
 
     protected $rules = [
-        'voter.firstname' => 'required',
-        'voter.lastname' => 'required',
         'voter.dni' => 'required|numeric',
-        'voter.phone' => 'required',
-        'voter.lider_id' => 'required',
-        'voter.find' => 'numeric',
+        'voter.place' => 'max:100',
+        'voter.table' => 'max:100',
     ];
 
     protected $messages = [
-        'firstname.required' => 'Nombre requerido',
-        'lastname.required' => 'Apellido requerido',
         'dni.numeric' => 'La cedula debe ser un numero sin letras o caracteres',
         'dni.required' => 'La cedula es campo obligatorio',
-        'phone.required' => 'Número requerido',
-        'lider_id.required' => 'Lider requerido',
-        'find.numeric' => 'Estado de voto requerido',
     ];
 
     protected $listeners = [
@@ -66,17 +59,18 @@ class VoterLivewire extends Component
     public function render()
     {
         if($this->readyToLoad){
-            $voters = Voter01::select('dni','id','firstname','lastname','phone','address','lider_dni','coordinator_dni','status')
-                ->where('firstname','like','%' . $this->search . '%')
-                ->orWhere('lastname','like','%' . $this->search . '%')
-                ->orWhere('dni','LIKE',$this->search)
+            
+            $voters = Voter01::select('dni','id','firstname','lastname','phone','lider_dni','coordinator_dni','table','place')
+                ->where('coordinator_dni',Auth::user()->dni)
+                // ->where('firstname','like','%' . $this->search . '%')
+                // ->orWhere('lastname','like','%' . $this->search . '%')
+                //->orWhere('dni','LIKE',$this->search)
                 ->distinct('dni')
                 ->paginate($this->cant);
         }else{
             $voters = [];
         }
-        $liders = Lider::where('status','ACTIVE')->orderBy('firstname')->get();
-        return view('livewire.voter-livewire',compact('voters','liders'));
+        return view('livewire.voter-livewire',compact('voters'));
     }
 
     public function order($sortWeb){
@@ -89,8 +83,9 @@ class VoterLivewire extends Component
         }else{$this->sort = $sortWeb;$this->direction = 'asc';}
     }
 
-    public function edit(Voter01 $voter){
-        $this->voter = $voter;
+    public function edit($id){
+        $voter01 = Voter01::find($id);
+        $this->voter = $voter01;
         $this->open_edit = true;
     }
 

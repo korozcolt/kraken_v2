@@ -75,7 +75,6 @@ class CreateVoter extends Component
     }
 
     public function save(){
-        $this->validate();
         $this->complete_name = $this->firstname . ' ' . $this->lastname;
         Voter::create([
             'firstname' => strtoupper($this->firstname),
