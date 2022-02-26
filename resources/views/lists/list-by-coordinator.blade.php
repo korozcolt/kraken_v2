@@ -39,13 +39,13 @@
                                             {{$voter->dni}}
                                         </td>
                                         <td>
-                                            {{$voter->completename}}
+                                            {{$voter->firstname}} {{$voter->lastname}}
                                         </td>
                                         <td>
                                             {{$voter->phone}}
                                         </td>
                                         <td>
-                                            {{$voter->lider->firstname}}
+                                            {{$voter->lider_firstname}} {{$voter->lider_lastname}}
                                         </td>
 
                                     </tr>
