@@ -4,9 +4,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    
-                    <h4 class="card-title">Lista de {{  $coordinator ? $coordinator->complete_name : '' }}  - {{ $voters->count()}}</h4>
-                    
+                    <h4 class="card-title">Lista de {{ $coordinator->complete_name }}</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -24,9 +22,6 @@
                             <th>
                                 Telefono
                             </th>
-                            <th>
-                                Lider
-                            </th>
                             </thead>
                             <tbody>
                             @if($voters->count() > 0)
@@ -39,15 +34,11 @@
                                             {{$voter->dni}}
                                         </td>
                                         <td>
-                                            {{$voter->completename}}
+                                            {{$voter->complete_name}}
                                         </td>
                                         <td>
                                             {{$voter->phone}}
                                         </td>
-                                        <td>
-                                            {{$voter->lider->firstname}}
-                                        </td>
-
                                     </tr>
                                 @endforeach
                             @else
@@ -56,7 +47,6 @@
                                         <h4 class="text-center">No hay registros</h4>
                                     </td>
                                 </tr>
-                            @endif
                             </tbody>
                         </table>
                     </div>

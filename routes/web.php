@@ -6,6 +6,7 @@ use App\Http\Livewire\SupervisorLivewire;
 use App\Http\Livewire\CoordinatorLivewire;
 use App\Http\Livewire\LiderLivewire;
 use App\Http\Livewire\VoterLivewire;
+use App\Http\Controllers\ListController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,4 +39,7 @@ Route::middleware(['auth:sanctum','verified'])->get('/reports', function(){
 Route::get('state/{state}/cities', [StateController::class, 'getCities'])->name('getCities');
 
 //Route::group(['middleware'])
+
+Route::get('/listados', [ListController::class, 'index'])->name('listados.index');
+Route::post('/listados', [ListController::class, 'income'])->name('listados.income');
 
