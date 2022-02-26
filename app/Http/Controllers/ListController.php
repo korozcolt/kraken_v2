@@ -36,7 +36,7 @@ class ListController extends Controller
 
             return view('lists.list-by-coordinator', compact('voters', 'coordinator'));
         }else {
-            return redirect()->back()->with('error', 'Datos incorrectos');
+            return abort(404);
         }
                    
         

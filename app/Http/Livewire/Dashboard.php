@@ -15,7 +15,7 @@ class Dashboard extends Component
     {
         $coordinators = Coordinator::all();
         $leaders = Lider::all();
-        $voters = voter01::all();
+        $voters = Voter01::all();
 
 
         return view('livewire.dashboard', compact('coordinators','leaders','voters'));
