@@ -1,0 +1,536 @@
+[
+    {
+        "firstname": "OMAR",
+        "lastname": "OCHOA GARCIA",
+        "dni": 1102795657,
+        "phone": 3043876102
+    },
+    {
+        "firstname": "AGUSTIN SEVERIANO",
+        "lastname": "ROMERO SANTOS",
+        "dni": 92553287,
+        "phone": 3007741375
+    },
+    {
+        "firstname": "ALBEIRO RAMON",
+        "lastname": "CONTRERAS AMADOR",
+        "dni": 9314406,
+        "phone": 3242170541
+    },
+    {
+        "firstname": "ANIBAL ANTONIO",
+        "lastname": "GARAY AVILA",
+        "dni": 92542959,
+        "phone": 3004481931
+    },
+    {
+        "firstname": "ARTHUR",
+        "lastname": "GUERRA YANEZ",
+        "dni": 1102817939,
+        "phone": 3043969601
+    },
+    {
+        "firstname": "CARLOS ANDRES",
+        "lastname": "PEREZ NAZAR",
+        "dni": 92558188,
+        "phone": 3205760084
+    },
+    {
+        "firstname": "JOSE CARLOS",
+        "lastname": "QUINTO MADRID",
+        "dni": 92535139,
+        "phone": 3226153739
+    },
+    {
+        "firstname": "CRISTIAN JAVIER",
+        "lastname": "BLANQUICETH TAMARA",
+        "dni": 1102863528,
+        "phone": 3128112351
+    },
+    {
+        "firstname": "DANIELA PAOLA",
+        "lastname": "GARCIA CONDE",
+        "dni": 1102885735,
+        "phone": 3002533283
+    },
+    {
+        "firstname": "DANNA TERESA",
+        "lastname": "GOMEZ MORALES",
+        "dni": 1102885960,
+        "phone": 3022538888
+    },
+    {
+        "firstname": "DARWIN DAVID",
+        "lastname": "LLORENTE ROMERO",
+        "dni": 92532646,
+        "phone": 3014565019
+    },
+    {
+        "firstname": "EFRAIN ALBERTO",
+        "lastname": "BUITRAGO TAPIA",
+        "dni": 92530090,
+        "phone": 3233907069
+    },
+    {
+        "firstname": "ISAAC ENRIQUE",
+        "lastname": "REVOLLEDO BARRIOS",
+        "dni": 18778361,
+        "phone": 3016305420
+    },
+    {
+        "firstname": "JADUAR ENRIQUE",
+        "lastname": "BUELVAS AGUAS",
+        "dni": 92557105,
+        "phone": 3007313543
+    },
+    {
+        "firstname": "JAIDER ALBERTO",
+        "lastname": "IBÁÑEZ PALENCIA",
+        "dni": 1005552258,
+        "phone": 3135363550
+    },
+    {
+        "firstname": "JUAN CARLOS",
+        "lastname": "FIGUEROA VERGARA",
+        "dni": 3838230,
+        "phone": 3013617865
+    },
+    {
+        "firstname": "KAREN MILENA",
+        "lastname": "MERCADO MARTINEZ",
+        "dni": 1102812509,
+        "phone": 3016172495
+    },
+    {
+        "firstname": "LINA MARIA",
+        "lastname": "ANAYA ROMERO",
+        "dni": 1100629481,
+        "phone": 3024496525
+    },
+    {
+        "firstname": "SALVADOR AMIN",
+        "lastname": "CURE FLOREZ",
+        "dni": 9195884,
+        "phone": 3015018781
+    },
+    {
+        "firstname": "GINA MELISSA",
+        "lastname": "GINA MELISSA",
+        "dni": 22865750,
+        "phone": 3024077557
+    },
+    {
+        "firstname": "OBER FRANCISCO",
+        "lastname": "SALCEDO ARROYO",
+        "dni": 92642220,
+        "phone": 3106577124
+    },
+    {
+        "firstname": "JAVIER ANTONIO",
+        "lastname": "PEREZ CASTELL",
+        "dni": 92535699,
+        "phone": 3242707704
+    },
+    {
+        "firstname": "ALDEMAR",
+        "lastname": "ALFARO RIVERO",
+        "dni": 92544672,
+        "phone": 3017692120
+    },
+    {
+        "firstname": "CESAR TULIO",
+        "lastname": "SANTOS VERGARA",
+        "dni": 6819482,
+        "phone": 3012072695
+    },
+    {
+        "firstname": "DINA PAOLA",
+        "lastname": "ENCINA DEL VALLE",
+        "dni": 64701488,
+        "phone": 3162279206
+    },
+    {
+        "firstname": "GREY JUDITH",
+        "lastname": "VILLACOB RIOS",
+        "dni": 1102810077,
+        "phone": 3013769846
+    },
+    {
+        "firstname": "HENRY",
+        "lastname": "SALCEDO",
+        "dni": 80057515,
+        "phone": 3135452921
+    },
+    {
+        "firstname": "HERNER LUIS",
+        "lastname": "PEREZ PATERNINA",
+        "dni": 92529668,
+        "phone": 3013425745
+    },
+    {
+        "firstname": "JOSE RICARDO",
+        "lastname": "BOLAÑO GARIZAO",
+        "dni": 92548854,
+        "phone": 3012994006
+    },
+    {
+        "firstname": "KAREN PATRICIA",
+        "lastname": "PEREZ SANTOS",
+        "dni": 1102812883,
+        "phone": 3006802952
+    },
+    {
+        "firstname": "LEISVER DE JESUS",
+        "lastname": "MOYA LUNA",
+        "dni": 92538616,
+        "phone": 3012881907
+    },
+    {
+        "firstname": "LEONARDO",
+        "lastname": "NOVA",
+        "dni": 92534068,
+        "phone": 3024373846
+    },
+    {
+        "firstname": "LUIS ARTURO",
+        "lastname": "SALOM HERRERA",
+        "dni": 92500225,
+        "phone": 3205665436
+    },
+    {
+        "firstname": "MAXIMO LORENZO",
+        "lastname": "VERGARA RUZ",
+        "dni": 92495714,
+        "phone": 3114281089
+    },
+    {
+        "firstname": "MIGUEL ENRIQUE",
+        "lastname": "MONTIEL SALGADO",
+        "dni": 10875525,
+        "phone": 3004862444
+    },
+    {
+        "firstname": "OMAR JAFETH",
+        "lastname": "URUETA MORENO",
+        "dni": 92510377,
+        "phone": 3014455648
+    },
+    {
+        "firstname": "ROBERTO CARLOS",
+        "lastname": "PAYARES VERGARA",
+        "dni": 92527828,
+        "phone": 3015638291
+    },
+    {
+        "firstname": "ROSA MARIA",
+        "lastname": "MARTINEZ OSORIO",
+        "dni": 35144686,
+        "phone": 3205086116
+    },
+    {
+        "firstname": "ROSSELYN",
+        "lastname": "MARTINEZ OTERO",
+        "dni": 64579961,
+        "phone": 3215388289
+    },
+    {
+        "firstname": "YACIRA DEL CARMEN",
+        "lastname": "YACIRA DEL CARMEN",
+        "dni": 64699420,
+        "phone": 3203959413
+    },
+    {
+        "firstname": "UBALDO",
+        "lastname": "PELUFO",
+        "dni": 92504574,
+        "phone": 3114366879
+    },
+    {
+        "firstname": "VICTOR JULIO",
+        "lastname": "PATERNINA CANCHILA",
+        "dni": 92534610,
+        "phone": 3005979191
+    },
+    {
+        "firstname": "WILMER JOSE",
+        "lastname": "PATERNINA GOMEZ",
+        "dni": 92601854,
+        "phone": 3116169472
+    },
+    {
+        "firstname": "OSNALDY",
+        "lastname": "ACUÑA",
+        "dni": 1102795853,
+        "phone": 3016208294
+    },
+    {
+        "firstname": "OSNAR",
+        "lastname": "ACUÑA",
+        "dni": 1102795854,
+        "phone": 3016208294
+    },
+    {
+        "firstname": "ODRIN ENRIQUE",
+        "lastname": "BELLO OLIVEROS",
+        "dni": 92512087,
+        "phone": 3002286446
+    },
+    {
+        "firstname": "MONICA",
+        "lastname": "PEREZ",
+        "dni": 64568652,
+        "phone": 3116641919
+    },
+    {
+        "firstname": "MERY SOFIA",
+        "lastname": "VALETA MARTINEZ",
+        "dni": 64476324,
+        "phone": 3106369331
+    },
+    {
+        "firstname": "CARLOS ALBERTO",
+        "lastname": "PATIÑO MORALES",
+        "dni": 98570699,
+        "phone": 3015115299
+    },
+    {
+        "firstname": "JULIO CESAR",
+        "lastname": "CONTRERAS",
+        "dni": 92497417,
+        "phone": 3012739794
+    },
+    {
+        "firstname": "JOVANA",
+        "lastname": "CARRASCAL SIERRA",
+        "dni": 23175633,
+        "phone": 3113436420
+    },
+    {
+        "firstname": "HUMBERTO JAVIER",
+        "lastname": "ACUÑA HERRERA",
+        "dni": 92526203,
+        "phone": 3012263174
+    },
+    {
+        "firstname": "HOLMES",
+        "lastname": "GOMEZ PALENCIA",
+        "dni": 92520568,
+        "phone": 3022204787
+    },
+    {
+        "firstname": "FRANCISCO",
+        "lastname": "REALES",
+        "dni": 15620964,
+        "phone": 3143356560
+    },
+    {
+        "firstname": "EDUARDO FABIO",
+        "lastname": "SANTOS CRUZ",
+        "dni": 92531625,
+        "phone": 3015659257
+    },
+    {
+        "firstname": "ERIKA",
+        "lastname": "PADILLA",
+        "dni": 64589292,
+        "phone": 3003220972
+    },
+    {
+        "firstname": "EDER",
+        "lastname": "HERRERA",
+        "dni": 92510222,
+        "phone": 3167481013
+    },
+    {
+        "firstname": "DIONICIO",
+        "lastname": "JULIO MATURANA",
+        "dni": 71983957,
+        "phone": 3113317529
+    },
+    {
+        "firstname": "DIANA",
+        "lastname": "ZUÑIGA",
+        "dni": 64584658,
+        "phone": 3002378360
+    },
+    {
+        "firstname": "CARMEN",
+        "lastname": "CARDALES",
+        "dni": 45425188,
+        "phone": 3016766164
+    },
+    {
+        "firstname": "CESAR AUGUSTO",
+        "lastname": "PUENTE GUTIERREZ",
+        "dni": 1137195081,
+        "phone": 3133911289
+    },
+    {
+        "firstname": "CESAR AUGUSTO",
+        "lastname": "CARDALES CORREA",
+        "dni": 92503081,
+        "phone": 3114076509
+    },
+    {
+        "firstname": "ALBEIRO JOSE",
+        "lastname": "MERCADO LAMBRAÑO",
+        "dni": 92525289,
+        "phone": 3113379007
+    },
+    {
+        "firstname": "ROSIRIS",
+        "lastname": "ACUÑA CONTRERAS",
+        "dni": 64563069,
+        "phone": 3102296610
+    },
+    {
+        "firstname": "OBER",
+        "lastname": "VERGARA",
+        "dni": 92527367,
+        "phone": 3042734359
+    },
+    {
+        "firstname": "EDIL ALBERTO",
+        "lastname": "TAPIAS BASSA",
+        "dni": 92536126,
+        "phone": 3185506339
+    },
+    {
+        "firstname": "ESMERALDA",
+        "lastname": "GOMEZ",
+        "dni": 64568541,
+        "phone": 3003408495
+    },
+    {
+        "firstname": "JOSE",
+        "lastname": "GOMEZ",
+        "dni": 92527122,
+        "phone": 3112560691
+    },
+    {
+        "firstname": "CARLOS",
+        "lastname": "ROYET",
+        "dni": 92538999,
+        "phone": 3113014797
+    },
+    {
+        "firstname": "ERNESTO MANUEL",
+        "lastname": "CONTRERAS BARRIOS",
+        "dni": 6820667,
+        "phone": 3232997518
+    },
+    {
+        "firstname": "OSVALDO",
+        "lastname": "ARROLLO",
+        "dni": 1102822387,
+        "phone": 3014318496
+    },
+    {
+        "firstname": "JULIO DAVID",
+        "lastname": "ARIAS CONTRERAS",
+        "dni": 92535516,
+        "phone": 3242688213
+    },
+    {
+        "firstname": "JENNY ISABEL",
+        "lastname": "BALLUT PESTANA",
+        "dni": 64541470,
+        "phone": 3017985234
+    },
+    {
+        "firstname": "IVAN ESTEBAN",
+        "lastname": "CHIMA RODRIGUEZ",
+        "dni": 92534448,
+        "phone": 3044756850
+    },
+    {
+        "firstname": "MISAEL ALFONSO",
+        "lastname": "PASTRANA DE LA OSA",
+        "dni": 15044322,
+        "phone": 3053600423
+    },
+    {
+        "firstname": "ELIECER ENRIQUE",
+        "lastname": "MARTELO BARRIOS",
+        "dni": 92546229,
+        "phone": 3126930381
+    },
+    {
+        "firstname": "SUMAYA LEONOR",
+        "lastname": "ESTRADA CURE",
+        "dni": 23175669,
+        "phone": 3148793060
+    },
+    {
+        "firstname": "LEYLA PAOLA",
+        "lastname": "PEINADO DIAZ",
+        "dni": 64698128,
+        "phone": 3045642030
+    },
+    {
+        "firstname": "EDWIN JOSE",
+        "lastname": "BELLO JULIO",
+        "dni": 92448380,
+        "phone": 3014545952
+    },
+    {
+        "firstname": "LILIANA PAOLA",
+        "lastname": "DIAZ TORRES",
+        "dni": 64799484,
+        "phone": 3017590451
+    },
+    {
+        "firstname": "LINCON ERNESTO",
+        "lastname": "BARBOZA CEDRON",
+        "dni": 92502983,
+        "phone": 3012852598
+    },
+    {
+        "firstname": "OSCAR JAVIER",
+        "lastname": "TAMARA ALFARO",
+        "dni": 92524398,
+        "phone": 3229335926
+    },
+    {
+        "firstname": "ARIS HARVEY",
+        "lastname": "RAMIREZ JUNIELES",
+        "dni": 92640854,
+        "phone": 3006700509
+    },
+    {
+        "firstname": "URIEL ENRIQUEZ",
+        "lastname": "REQUENA HERRERA",
+        "dni": 78019494,
+        "phone": 3103526395
+    },
+    {
+        "firstname": "JUAN CARLOS",
+        "lastname": "FADUL",
+        "dni": 92513372,
+        "phone": 300000
+    },
+    {
+        "firstname": "FREDY FERNáNDEZ",
+        "lastname": "MOLINA CHIMA",
+        "dni": 92537917,
+        "phone": 0
+    },
+    {
+        "firstname": "OSWALDO",
+        "lastname": "ARROYO",
+        "dni": 92694024,
+        "phone": 0
+    },
+    {
+        "firstname": "LEONARDO",
+        "lastname": "GUILLO",
+        "dni": 92553139,
+        "phone": 0
+    },
+    {
+        "firstname": "ROBINSON",
+        "lastname": "GOMEZ LADEUS",
+        "dni": 92522586,
+        "phone": 30000
+    }
+]
