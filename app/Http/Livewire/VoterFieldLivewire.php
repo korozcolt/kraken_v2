@@ -11,7 +11,7 @@ use App\Models\State;
 use App\Models\City;
 use Auth;
 
-class VoterLivewire extends Component
+class VoterFieldLivewire extends Component
 {
     use WithPagination;
 
@@ -73,8 +73,8 @@ class VoterLivewire extends Component
             
             if(Auth::user()->role == 'SUPERADMIN'){
                 $voters = Voter01::select('dni','id','firstname','lastname','phone','lider_dni','coordinator_dni','city_id','table','place')
+                ->whereNotNull('table')
                 ->where('firstname','like','%' . $this->search . '%')
-                ->orWhere('lastname','like','%' . $this->search . '%')
                 ->orWhere('dni','LIKE',$this->search)
                 ->distinct('dni')
                 ->paginate($this->cant);
@@ -90,7 +90,7 @@ class VoterLivewire extends Component
         }else{
             $voters = [];
         }
-        return view('livewire.voter-livewire',compact('voters'));
+        return view('livewire.voter-field-livewire',compact('voters'));
     }
 
     public function order($sortWeb){

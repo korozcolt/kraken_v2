@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AlterTableVoterAddColumnCity extends Migration
+class AddFieldVoter01sTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AlterTableVoterAddColumnCity extends Migration
      */
     public function up()
     {
-        Schema::table('voters', function (Blueprint $table) {
-            $table->foreignId('city_id')->constrained()->nullable()->after('table');
+        Schema::table('voter01s', function (Blueprint $table) {
+            $table->bigInteger('city_id')->nullable()->after('table');
             
         });
         

@@ -1,19 +1,8 @@
 <div wire:init="loadVoter">
     <x-slot name="header">
-        @if (auth()->user()->role === 'SUPERADMIN')
-        <ul class="flex">
-            <li class="mr-6">
-              <a class="text-blue-500 hover:text-blue-800" href="{{ route('voters.main') }}">VOTANTES</a>
-            </li>
-            <li class="mr-6">
-              <a class="text-blue-500 hover:text-blue-800" href="{{ route('voters.field') }}">INGRESO DE PUESTOS</a>
-            </li>
-        </ul>
-        @else
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Votantes') }}
         </h2>
-        @endif
     </x-slot>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -22,9 +11,9 @@
                     <div class="box pt-6">
                         <div class="box-wrapper">
                             <div class="flex justify-end p-4">
-                                {{-- @livewire('create-voter')  --}}
+                                @livewire('create-voter')
                             </div>
-                            {{-- <div class=" bg-white rounded flex items-center w-full p-3 shadow-sm border border-gray-200">
+                            <div class=" bg-white rounded flex items-center w-full p-3 shadow-sm border border-gray-200">
                                 <button class="outline-none focus:outline-none"><svg class=" w-5 text-gray-600 h-5 cursor-pointer" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
                                 <input type="search" placeholder="Buscar" wire:model="search" class="w-full pl-4 text-sm outline-none focus:outline-none bg-transparent">
                                 <div class="select">
@@ -35,7 +24,7 @@
                                         <option value="100">100</option>
                                     </select>
                                 </div>
-                            </div> --}}
+                            </div>
                             </div>
                         </div>
                         <div class="w-full mb-8 overflow-hidden rounded-lg shadow-lg">
