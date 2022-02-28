@@ -104,6 +104,7 @@ class VoterLivewire extends Component
     }
 
     public function edit($id){
+        
         $voter01 = Voter01::find($id);
         $this->voter = $voter01;
         $this->open_edit = true;
@@ -116,7 +117,7 @@ class VoterLivewire extends Component
 
     public function updateCall(Voter01 $voter){
         $this->validate();
-        $voter->save();
+        $this->voter->save();
         $this->reset(['open_status']);
         $this->emit('alert','Se ha editado un votante');
     }
