@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Voter01;
 use File;
 
-class VoterNicolasSeerder extends Seeder
+class VoterNicolasSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -26,7 +26,7 @@ class VoterNicolasSeerder extends Seeder
                     'lastname' => '',
                     'phone' => 0,
                     'address' => 'SINCELEJO',
-                    'lider_dni' => 0,
+                    'lider_dni' => 73122790,
                     'coordinator_dni' => 73122790,
                     'gender' => 'NONE',
                     'status' => 'ACTIVE',
