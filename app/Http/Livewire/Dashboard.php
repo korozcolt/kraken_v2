@@ -13,11 +13,13 @@ class Dashboard extends Component
 {
     public function render()
     {
-        $coordinators = Coordinator::all();
-        $leaders = Lider::all();
-        $voters = Voter01::all();
+        $voters = Voter01::count();
+        $sincelejo =Voter01::where('city_id', '70001')
+                            ->whereNotNull('place')->count();
+
+        $sucre = Voter01::where('city_id','<>','70001')->whereNotNull('place')->count();                        
 
 
-        return view('livewire.dashboard', compact('coordinators','leaders','voters'));
+        return view('livewire.dashboard', compact('sincelejo','voters','sucre'));
     }
 }
