@@ -78,6 +78,7 @@ class VoterLivewire extends Component
                 ->orWhere('dni','LIKE',$this->search)
                 ->distinct('dni')
                 ->paginate($this->cant);
+                $sincelejo = Voter01::where('city_id', '70001')->count();
             }else{
                 $voters = Voter01::select('dni','id','firstname','lastname','phone','lider_dni','coordinator_dni','city_id','table','place')
                 ->where('coordinator_dni',Auth::user()->dni)
@@ -86,11 +87,13 @@ class VoterLivewire extends Component
                 //->orWhere('dni','LIKE',$this->search)
                 ->distinct('dni')
                 ->paginate($this->cant);
+                $sincelejo = 0;
             }
         }else{
             $voters = [];
+            $sincelejo = 0;
         }
-        return view('livewire.voter-livewire',compact('voters'));
+        return view('livewire.voter-livewire',compact('voters','sincelejo'));
     }
 
     public function order($sortWeb){

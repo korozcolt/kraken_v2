@@ -74,8 +74,6 @@ class VoterFieldLivewire extends Component
             if(Auth::user()->role == 'SUPERADMIN'){
                 $voters = Voter01::select('dni','id','firstname','lastname','phone','lider_dni','coordinator_dni','city_id','table','place')
                 ->whereNotNull('table')
-                ->where('firstname','like','%' . $this->search . '%')
-                ->orWhere('dni','LIKE',$this->search)
                 ->distinct('dni')
                 ->paginate($this->cant);
             }else{
