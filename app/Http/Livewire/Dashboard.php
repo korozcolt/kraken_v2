@@ -17,9 +17,11 @@ class Dashboard extends Component
         $sincelejo =Voter01::where('city_id', '70001')
                             ->whereNotNull('place')->count();
 
-        $sucre = Voter01::where('city_id','<>','70001')->whereNotNull('place')->count();                        
+        $sucre = Voter01::where('city_id','<>','70001')->whereNotNull('place')->count();
+        $noestan = Voter01::where('place', 'like','%CENSO%')
+                            ->orWhere('table','like','%no%')->count();                        
 
 
-        return view('livewire.dashboard', compact('sincelejo','voters','sucre'));
+        return view('livewire.dashboard', compact('sincelejo','voters','sucre','noestan'));
     }
 }
