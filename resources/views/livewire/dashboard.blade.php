@@ -100,9 +100,9 @@
                                 </div>
                             </div>
                             <div class="flex-1 text-right md:text-center">
-                                <h2 class="font-bold uppercase text-gray-600">Duplicados</h2>
+                                <h2 class="font-bold uppercase text-gray-600">NO ESTÁN CENSO</h2>
                                 <p class="font-bold text-3xl">0 <span class="text-red-500"><i
-                                            class="fas fa-caret-up"></i></span></p>
+                                            class="fas fa-caret-up"></i></span>{{ $noestan }}</p>
                             </div>
                         </div>
                     </div>
