@@ -109,7 +109,26 @@
                     <!--/Metric Card-->
                 </div>
             </div>
-
+            <div>
+                <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                    <table class="table-auto">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2">Puesto</th>
+                                <th class="px-4 py-2">Votos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($censos as $puesto)
+                                <tr>
+                                    <td class="border px-4 py-2">{{ $puesto->puesto }}</td>
+                                    <td class="border px-4 py-2">{{ $puesto->cantidad }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
             {{-- <div class="flex flex-row flex-wrap flex-grow mt-2">
 
