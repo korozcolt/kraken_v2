@@ -23,7 +23,6 @@
                     <div class="box pt-6">
                         <div class="box-wrapper">
                             <div class="flex justify-end p-4">
-                                <p>Sincelejo -> {{ $sincelejo }}</p>
                                 {{-- @livewire('create-voter') --}}
                             </div>
                             {{-- <div class=" bg-white rounded flex items-center w-full p-3 shadow-sm border border-gray-200">
@@ -173,7 +172,18 @@
         <x-slot name="content">
             <div class="mb-4">
                 <x-jet-label value="Cedula" class="text-left"></x-jet-label>
-                <x-jet-input type="number" class="w-full" wire:model="voter.dni"></x-jet-input>
+                <x-jet-input type="number"
+                    class="w-full disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none"
+                    wire:model="voter.dni" disabled>
+                </x-jet-input>
+            </div>
+            <div class="mb-4">
+                <x-jet-label value="Nombre" class="text-left"></x-jet-label>
+                <x-jet-input type="text" class="w-full" wire:model="voter.firstname"></x-jet-input>
+            </div>
+            <div class="mb-4">
+                <x-jet-label value="Apellido" class="text-left"></x-jet-label>
+                <x-jet-input type="text" class="w-full" wire:model="voter.lastname"></x-jet-input>
             </div>
             <div class="mb-4">
                 <x-jet-label value="Puesto" class="text-left"></x-jet-label>
