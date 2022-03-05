@@ -37,8 +37,23 @@ class ListController extends Controller
             return view('lists.list-by-coordinator', compact('voters', 'coordinator'));
         }else {
             return abort(404);
-        }
-                   
-        
+        }   
     }
+
+    public function coordinators(){
+        $coordinators = Coordinator::all();
+        return view('lists.list-coordinator', compact('coordinators'));
+    }
+
+    public function voters($id){
+        $coordinator = Coordinator::where('dni', $id)->get();
+        $voter = DB::table('voter01s as v')
+            ->join('coordinators as c','v.coordinator_dni','=','c.dni')
+            ->leftJoin('liders as l','v.lider_dni','=','l.dni')
+            ->select('v.*','c.firstname as coordinator_firstname','c.lastname as coordinator_lastname','l.firstname as lider_firstname','l.lastname as lider_lastname')
+            ->where('v.coordinator_dni', $id)
+            ->get();
+        return view('lists.list-voter', compact('coordinator','voter'));
+    }
+
 }
