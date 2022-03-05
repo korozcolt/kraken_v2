@@ -12,8 +12,15 @@
                                         class="fas fa-user-check fa-2x fa-inverse"></i></div>
                             </div>
                             <div class="flex-1 text-right md:text-center">
-                                <h2 class="font-bold uppercase text-gray-600">Total Ingresados</h2>
-                                <p class="font-bold text-3xl">{{ $voters }} <span class="text-green-500"><i
+                                <h2 class="font-bold uppercase text-gray-600">Total actos para votar</h2>
+                                <p class="font-bold text-3xl">@php
+                                    $votansucre = 0;
+                                    foreach ($sincelejo as $value) {
+                                        $votansucre += $value->cantidad;
+                                    }
+                                    $votansucre = $votansucre + $sucre;
+                                    echo $votansucre;
+                                @endphp<span class="text-green-500"><i
                                             class="fas fa-caret-up"></i></span></p>
                             </div>
                         </div>
@@ -49,7 +56,7 @@
                             </div>
                             <div class="flex-1 text-right md:text-center">
                                 <h2 class="font-bold uppercase text-gray-600">NUEVOS SIMPATIZANTES</h2>
-                                <p class="font-bold text-3xl">0 <span class="text-yellow-600"><i
+                                <p class="font-bold text-3xl">{{ $voters }} <span class="text-yellow-600"><i
                                             class="fas fa-caret-up"></i></span></p>
                             </div>
                         </div>
@@ -67,7 +74,13 @@
                             </div>
                             <div class="flex-1 text-right md:text-center">
                                 <h2 class="font-bold uppercase text-gray-600">Votan en Sincelejo</h2>
-                                <p class="font-bold text-3xl">{{ $sincelejo }}</p>
+                                <p class="font-bold text-3xl">@php
+                                    $votan = 0;
+                                    foreach ($sincelejo as $value) {
+                                        $votan += $value->cantidad;
+                                    }
+                                    echo $votan;
+                                @endphp</p>
                             </div>
                         </div>
                     </div>
