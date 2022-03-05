@@ -16,13 +16,15 @@ class Dashboard extends Component
     public function render()
     {
         $voters = Voter01::count();
-        $sincelejo =Voter01::where('city_id', '70001')
-                            ->whereNotNull('place')->count();
+        $sincelejo = DB::table('censos')
+                    ->join('voter01s','voter01s.place','=','censos.place')
+                    ->select(DB::raw('count(*) as cantidad, censos.place as puesto'))
+                    ->groupBy('censos.place')->get();
 
         $sucre = Voter01::where('city_id','<>','70001')->whereNotNull('place')->count();
         $noestan = Voter01::where('place', 'like','%CENSO%')
                             ->orWhere('place','like','%censo%')->count();
-        $notienencenso = Voter01::whereNull('place')->count();
+        $notienencenso = Voter01::whereNull('place')->orWhereNull('table')->count();
 
         $censos = DB::table('censos')
                     ->join('voter01s','voter01s.place','=','censos.place')
