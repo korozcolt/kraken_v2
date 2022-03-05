@@ -1,8 +1,17 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+
         </h2>
+        <ul class="flex">
+            <li class="mr-6">
+                {{ __('Dashboard') }}
+            </li>
+            <li class="mr-6">
+                <a class="text-blue-500 hover:text-blue-800"
+                    href="{{ route('listados.coordinators') }}">Coordinadores</a>
+            </li>
+        </ul>
     </x-slot>
 
     <div class="py-12">
