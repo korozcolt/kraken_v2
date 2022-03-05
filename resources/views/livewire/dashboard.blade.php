@@ -38,7 +38,14 @@
                             </div>
                             <div class="flex-1 text-right md:text-center">
                                 <h2 class="font-bold uppercase text-gray-600">Total Sin ingresar censo</h2>
-                                <p class="font-bold text-3xl"> {{ $notienencenso }}<span class="text-pink-500"><i
+                                <p class="font-bold text-3xl">@php
+                                    $votansucre = 0;
+                                    foreach ($sincelejo as $value) {
+                                        $votansucre += $value->cantidad;
+                                    }
+                                    $votansucre = $votansucre + $sucre;
+                                    echo $voters - $votansucre;
+                                @endphp<span class="text-pink-500"><i
                                             class="fas fa-exchange-alt"></i></span></p>
                             </div>
                         </div>
