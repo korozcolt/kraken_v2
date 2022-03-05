@@ -82,7 +82,6 @@ class VoterLivewire extends Component
                 ->paginate($this->cant);
             }else if(Auth::user()->role == 'VERIFIER'){
                 $voters = Voter01::select('dni','id','firstname','lastname','phone','lider_dni','coordinator_dni','city_id','table','place')
-                ->where('guide','=','true')
                 ->distinct('dni')
                 ->paginate($this->cant);
             }else{
