@@ -39,7 +39,7 @@
                                     @foreach ($voter as $value)
                                         <tr>
                                             <td>
-                                                {{ $value->id }}
+                                                {{ $loop->index + 1 }}
                                             </td>
                                             <td>
                                                 {{ $value->dni }}
