@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Coordinator;
 use App\Models\Voter01;
 use Illuminate\Support\Facades\DB;
+use App\Models\Censo;
 
 class ListController extends Controller
 {
@@ -45,6 +46,19 @@ class ListController extends Controller
         return view('lists.list-coordinator', compact('coordinators'));
     }
 
+    public function places(){
+        $censos = Censo::all();
+        return view('lists.list-censo', compact('censos'));
+    }
+
+    public function tables($place){
+        $table = DB::table('voter01s as v')
+            ->select('v.*')
+            ->where('v.place','like', $place)
+            ->get();
+        return view('lists.list-tables', compact('table'));
+    }
+
     public function voters($id){
         $coordinator = Coordinator::where('dni', $id)->get();
         $voter = DB::table('voter01s as v')
@@ -52,8 +66,20 @@ class ListController extends Controller
             ->leftJoin('liders as l','v.lider_dni','=','l.dni')
             ->select('v.*','c.firstname as coordinator_firstname','c.lastname as coordinator_lastname','l.firstname as lider_firstname','l.lastname as lider_lastname')
             ->where('v.coordinator_dni', $id)
+            ->orderBy('l.firstname','asc')
             ->get();
         return view('lists.list-voter', compact('coordinator','voter'));
+    }
+
+    public function placers($place){
+        $voter = DB::table('voter01s as v')
+            ->join('coordinators as c','v.coordinator_dni','=','c.dni')
+            ->leftJoin('liders as l','v.lider_dni','=','l.dni')
+            ->select('v.*','c.firstname as coordinator_firstname','c.lastname as coordinator_lastname','l.firstname as lider_firstname','l.lastname as lider_lastname')
+            ->where('v.place', $place)
+            ->orderBy('v.table','asc')
+            ->get();
+        return view('lists.list-voter', compact('voter'));
     }
 
 }
