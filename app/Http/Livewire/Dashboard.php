@@ -22,8 +22,7 @@ class Dashboard extends Component
                     ->groupBy('censos.place')->get();
 
         $sucre = Voter01::where('city_id','<>','70001')->whereNotNull('place')->count();
-        $noestan = Voter01::where('place', 'like','%CENSO%')
-                            ->orWhere('place','like','%censo%')->count();
+        $noestan = Voter01::where('city_id', '1',)->count();
         //$notienencenso = Voter01::where('')->count();
 
         $censos = DB::table('censos')
