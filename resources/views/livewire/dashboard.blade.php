@@ -139,12 +139,22 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @php
+                                $totalizador = 0;
+                            @endphp
                             @foreach ($censos as $puesto)
                                 <tr>
                                     <td class="border px-4 py-2">{{ $puesto->puesto }}</td>
                                     <td class="border px-4 py-2">{{ $puesto->cantidad }}</td>
+                                    @php
+                                        $totalizador = $totalizador + $puesto->cantidad;
+                                    @endphp
                                 </tr>
                             @endforeach
+                            <tr>
+                                <td class="border px-4 py-2">Total</td>
+                                <td class="border px-4 py-2">{{ $totalizador }}</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

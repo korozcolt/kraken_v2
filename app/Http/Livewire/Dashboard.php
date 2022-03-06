@@ -17,17 +17,16 @@ class Dashboard extends Component
     {
         $voters = Voter01::count();
         $sincelejo = DB::table('censos')
-                    ->join('voter01s','voter01s.place','=','censos.place')
+                    ->join('voter01s',DB::raw('trim(voter01s.place)'),'=',DB::raw('trim(censos.place)'))
                     ->select(DB::raw('count(*) as cantidad, censos.place as puesto'))
                     ->groupBy('censos.place')->get();
 
         $sucre = Voter01::where('city_id','<>','70001')->whereNotNull('place')->count();
-        $noestan = Voter01::where('place', 'like','%CENSO%')
-                            ->orWhere('place','like','%censo%')->count();
+        $noestan = Voter01::where('city_id', '1',)->count();
         //$notienencenso = Voter01::where('')->count();
 
         $censos = DB::table('censos')
-                    ->join('voter01s','voter01s.place','=','censos.place')
+                    ->join('voter01s',DB::raw('trim(voter01s.place)'),'=',DB::raw('trim(censos.place)'))
                     ->select(DB::raw('count(*) as cantidad, censos.place as puesto'))
                     ->groupBy('censos.place')
                     ->get();
