@@ -17,7 +17,7 @@ class Dashboard extends Component
     {
         $voters = Voter01::count();
         $sincelejo = DB::table('censos')
-                    ->join('voter01s','voter01s.place','=','censos.place')
+                    ->join('voter01s',DB::raw('trim(voter01s.place)'),'=',DB::raw('trim(censos.place)'))
                     ->select(DB::raw('count(*) as cantidad, censos.place as puesto'))
                     ->groupBy('censos.place')->get();
 
@@ -27,7 +27,7 @@ class Dashboard extends Component
         //$notienencenso = Voter01::where('')->count();
 
         $censos = DB::table('censos')
-                    ->join('voter01s','voter01s.place','=','censos.place')
+                    ->join('voter01s',DB::raw('trim(voter01s.place)'),'=',DB::raw('trim(censos.place)'))
                     ->select(DB::raw('count(*) as cantidad, censos.place as puesto'))
                     ->groupBy('censos.place')
                     ->get();
