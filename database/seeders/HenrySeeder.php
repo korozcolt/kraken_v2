@@ -22,7 +22,7 @@ class HenrySeeder extends Seeder
             if(Voter01::where('dni',$value['dni'])->count() == 0){
                 Voter01::create([
                     'dni' => $value['dni'],
-                    'firstname' => $value['fisrtname'],
+                    'firstname' => $value['firstname'],
                     'lastname' => $value['lastname'],
                     'phone' => $value['phone'],
                     'address' => 'SINCELEJO',

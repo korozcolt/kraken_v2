@@ -45,4 +45,7 @@ Route::get('state/{state}/cities', [StateController::class, 'getCities'])->name(
 Route::get('/listados', [ListController::class, 'index'])->name('listados.index');
 Route::post('/listados', [ListController::class, 'income'])->name('listados.income');
 Route::get('/listado-coordinadores', [ListController::class, 'coordinators'])->name('listados.coordinators');
+Route::get('/listado-puestos', [ListController::class, 'places'])->name('listados.places');
 Route::get('/listado/{id}/votantes', [ListController::class, 'voters'])->name('listados.voters');
+Route::get('/listado/{place}/puestos', [ListController::class, 'placers'])->name('listados.placers');
+Route::get('/listado/{place}/mesas', [ListController::class, 'tables'])->name('listados.tables');
