@@ -53,8 +53,9 @@ class ListController extends Controller
 
     public function tables($place){
         $table = DB::table('voter01s as v')
-            ->select('v.*')
+            ->select('v.*', DB::raw('count(v.table) as total'))
             ->where('v.place','like', $place)
+            ->groupBy('v.table')
             ->get();
         return view('lists.list-tables', compact('table'));
     }
