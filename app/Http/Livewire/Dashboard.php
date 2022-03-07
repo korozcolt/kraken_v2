@@ -19,20 +19,30 @@ class Dashboard extends Component
         $sincelejo = DB::table('censos')
                     ->join('voter01s',DB::raw('trim(voter01s.place)'),'=',DB::raw('trim(censos.place)'))
                     ->select(DB::raw('count(*) as cantidad, censos.place as puesto'))
-                    ->groupBy('censos.place')->get();
+                    ->where('city_id','=','70001')
+                    ->groupBy('censos.place')
+                    ->get();
 
-        $sucre = Voter01::where('city_id','<>','70001')->whereNotNull('place')->count();
-        $noestan = Voter01::where('city_id', '1',)->count();
+        $sucre = Voter01::where('city_id','<>','70001')->where('city_id','<>','1')->whereNotNull('city_id')->count();
+        $noestan = Voter01::where('city_id', '1')->count();
         //$notienencenso = Voter01::where('')->count();
 
         $censos = DB::table('censos')
                     ->join('voter01s',DB::raw('trim(voter01s.place)'),'=',DB::raw('trim(censos.place)'))
                     ->select(DB::raw('count(*) as cantidad, censos.place as puesto'))
                     ->groupBy('censos.place')
+                    ->orderBy('cantidad','desc')
                     ->get();
-                    
 
+        $totalCensoWO = 0;
+        $totalCensoSucre = 0;
+        foreach ($sincelejo as $value)
+        {
+            $totalCensoWO += $value->cantidad;
+        }
+        $totalCensoSucre = $sucre + $totalCensoWO;
+        $totalAprobado = $voters - ($totalCensoSucre + $noestan);
 
-        return view('livewire.dashboard', compact('sincelejo','voters','sucre','noestan','censos'));
+        return view('livewire.dashboard', compact('sincelejo','voters','sucre','noestan','censos','totalAprobado','totalCensoSucre', 'totalCensoWO'));
     }
 }
