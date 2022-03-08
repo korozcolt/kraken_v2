@@ -68,6 +68,7 @@ class ListController extends Controller
             ->select('v.*','c.firstname as coordinator_firstname','c.lastname as coordinator_lastname','l.firstname as lider_firstname','l.lastname as lider_lastname')
             ->where('v.coordinator_dni', $id)
             ->orderBy('l.firstname','asc')
+            ->orderBy('v.place','desc')
             ->get();
         return view('lists.list-voter', compact('coordinator','voter'));
     }
