@@ -22,6 +22,9 @@
                                     Nombre Completo
                                 </th>
                                 <th>
+                                    Teléfono
+                                </th>
+                                <th>
                                     Puesto de Votación
                                 </th>
                                 <th>
@@ -46,6 +49,9 @@
                                             </td>
                                             <td>
                                                 {{ $value->firstname }} {{ $value->lastname }}
+                                            </td>
+                                            <td>
+                                                {{ $value->phone }}
                                             </td>
                                             <td>
                                                 {{ $value->place }}

@@ -30,6 +30,7 @@ class Dashboard extends Component
         $censos = DB::table('censos')
                     ->join('voter01s',DB::raw('trim(voter01s.place)'),'=',DB::raw('trim(censos.place)'))
                     ->select(DB::raw('count(*) as cantidad, censos.place as puesto'))
+                    ->where('city_id','=','70001')
                     ->groupBy('censos.place')
                     ->orderBy('cantidad','desc')
                     ->get();
