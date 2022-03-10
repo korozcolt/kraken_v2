@@ -42,7 +42,7 @@ class Dashboard extends Component
             $totalCensoWO += $value->cantidad;
         }
         $totalCensoSucre = $sucre + $totalCensoWO;
-        $totalAprobado = $voters - ($totalCensoSucre + $noestan);
+        $totalAprobado = $voters - ($totalCensoSucre + $noestan) ;
 
         return view('livewire.dashboard', compact('sincelejo','voters','sucre','noestan','censos','totalAprobado','totalCensoSucre', 'totalCensoWO'));
     }

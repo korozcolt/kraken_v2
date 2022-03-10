@@ -49,3 +49,9 @@ Route::get('/listado-puestos', [ListController::class, 'places'])->name('listado
 Route::get('/listado/{id}/votantes', [ListController::class, 'voters'])->name('listados.voters');
 Route::get('/listado/{place}/puestos', [ListController::class, 'placers'])->name('listados.placers');
 Route::get('/listado/{place}/mesas', [ListController::class, 'tables'])->name('listados.tables');
+
+Route::get('/votaciones', [ListController::class, 'votation'])->name('votaciones.index');
+Route::get('/votaciones/registro', [ListController::class, 'registro'])->name('votaciones.registro');
+Route::get('/votaciones/consulta', [ListController::class, 'consulta'])->name('votaciones.consulta');
+Route::post('/votaciones/consulta', [ListController::class, 'consultaDni'])->name('votaciones.consultaDni');
+Route::post('/votaciones/registro', [ListController::class, 'registroDni'])->name('votaciones.registroDni');

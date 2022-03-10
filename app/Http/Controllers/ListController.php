@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Coordinator;
 use App\Models\Voter01;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
 use App\Models\Censo;
 
 class ListController extends Controller
@@ -84,4 +85,41 @@ class ListController extends Controller
         return view('lists.list-voter', compact('voter'));
     }
 
+    public function votation(){
+        return view('votation.index');
+    }
+
+    public function consulta(){
+        return view('votation.consulta');
+    }
+
+    public function registro(){
+        return view('votation.registro');
+    }
+
+    public function consultaDni(Request $request){
+        $voter = Voter01::where('dni',$request->dni)->first();
+        return view('votation.response',compact('voter'));
+    }
+
+    public function registroDni(Request $request){
+        $voter = Voter01::where('dni',$request->dni)->first();
+        $data = '';
+        if($voter){
+            if($voter->guide === false)
+            {
+                $voter->guide = true; //
+                $voter->update();
+                $data = 'REGISTRO COMPLETO';
+            }
+            else
+            {
+                $data =  'ESTA PERSONA YA FUE REGISTRADA ANTERIORMENTE';
+            }
+        }else
+        {
+            $data = 'ESTA PERSONA NO SE ENCUENTRA REGISTRADA EN EL SISTEMA';
+        }
+        return view('votation.response-register',["success" => $data]);
+    }
 }
