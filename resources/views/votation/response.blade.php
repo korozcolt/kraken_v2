@@ -5,7 +5,6 @@
             @if (!is_null($voter))
                 <h1 class="text-center col-md-12">PUESTO: {{ $voter->place }}</h1>
                 <h1 class="text-center col-md-12">MESA: {{ $voter->table }}</h1>
-                <h1 class="text-center col-md-12">NOMBRE: {{ $voter->firstname }} {{ $voter->lastname }}</h1>
                 <a class="btn btn-lg btn-primary text-center" href="{{ route('votaciones.index') }}">NUEVA CONSULTA</a>
             @else
                 <h1 class="text-center col-md-12">NO SE ENCUENTRA REGISTRADO EN EL SISTEMA</h1>
