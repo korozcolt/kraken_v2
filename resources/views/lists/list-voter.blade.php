@@ -70,10 +70,10 @@
                                             </td>
                                             <td>
                                                 @if ($value->guide == true)
-                                                    <span class="badge badge-pill badge-success">REGISTRADO</span>
+                                                    <h4>REGISTRADO</h4><span class="badge badge-pill badge-success">OK</span>
                                                 @else
-                                                    <span class="badge badge-pill badge-warning">NO
-                                                        REGISTRADO</span>
+                                                    <h4>NO REGISTRADO</h4><span
+                                                        class="badge badge-pill badge-warning">X</span>
                                                 @endif
                                             </td>
                                         </tr>
