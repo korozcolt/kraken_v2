@@ -11,6 +11,9 @@
                 <a class="text-blue-500 hover:text-blue-800"
                     href="{{ route('listados.coordinators') }}">Coordinadores</a>
             </li>
+            <li class="mr-6">
+                <a class="text-blue-500 hover:text-blue-800" href="{{ route('votations.index') }}">VOTACIONES</a>
+            </li>
         </ul>
     </x-slot>
 
