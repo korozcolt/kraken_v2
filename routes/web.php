@@ -8,6 +8,9 @@ use App\Http\Livewire\LiderLivewire;
 use App\Http\Livewire\VoterLivewire;
 use App\Http\Livewire\VoterFieldLivewire;
 use App\Http\Controllers\ListController;
+
+use Illuminate\Support\Facades\DB;
+use App\Models\Censo;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,3 +58,14 @@ Route::get('/votaciones/registro', [ListController::class, 'registro'])->name('v
 Route::get('/votaciones/consulta', [ListController::class, 'consulta'])->name('votaciones.consulta');
 Route::post('/votaciones/consulta', [ListController::class, 'consultaDni'])->name('votaciones.consultaDni');
 Route::post('/votaciones/registro', [ListController::class, 'registroDni'])->name('votaciones.registroDni');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/votations', function () {
+    $censos = DB::table('censos')
+                    ->join('voter01s',DB::raw('trim(voter01s.place)'),'=',DB::raw('trim(censos.place)'))
+                    ->select(DB::raw('count(*) as cantidad, censos.place as puesto'))
+                    ->where('voter01s.guide','=',true)
+                    ->groupBy('censos.place')
+                    ->orderBy('cantidad','desc')
+                    ->get();
+    return view('lists.votations', compact('censos'));
+})->name('votations.index');

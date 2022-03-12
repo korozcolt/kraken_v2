@@ -36,6 +36,9 @@
                                 <th>
                                     Coordinador
                                 </th>
+                                <th>
+                                    VOTO
+                                </th>
                             </thead>
                             <tbody>
                                 @if ($voter->count() > 0)
@@ -64,6 +67,14 @@
                                             </td>
                                             <td>
                                                 {{ $value->coordinator_firstname }} {{ $value->coordinator_lastname }}
+                                            </td>
+                                            <td>
+                                                @if ($value->guide == true)
+                                                    <span class="badge badge-pill badge-success">REGISTRADO</span>
+                                                @else
+                                                    <span class="badge badge-pill badge-warning">NO
+                                                        REGISTRADO</span>
+                                                @endif
                                             </td>
                                         </tr>
                                     @endforeach
