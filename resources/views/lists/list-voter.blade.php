@@ -73,7 +73,8 @@
                                                     <div class="badge bg-success text-wrap" style="width: 6rem;">REGISTRADO
                                                     </div>
                                                 @else
-                                                    <div class="badge bg-danger text-wrap" style="width: 6rem;">REGISTRADO
+                                                    <div class="badge bg-danger text-wrap" style="width: 6rem;">NO
+                                                        REGISTRADO
                                                     </div>
                                                 @endif
                                             </td>
