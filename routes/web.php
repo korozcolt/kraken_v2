@@ -11,6 +11,7 @@ use App\Http\Controllers\ListController;
 
 use Illuminate\Support\Facades\DB;
 use App\Models\Censo;
+use App\Models\Coordinator;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -60,6 +61,7 @@ Route::post('/votaciones/consulta', [ListController::class, 'consultaDni'])->nam
 Route::post('/votaciones/registro', [ListController::class, 'registroDni'])->name('votaciones.registroDni');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/votations', function () {
+
     $censos = DB::table('censos')
                     ->join('voter01s',DB::raw('trim(voter01s.place)'),'=',DB::raw('trim(censos.place)'))
                     ->select(DB::raw('count(*) as cantidad, censos.place as puesto'))
@@ -69,3 +71,17 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/votations', function () {
                     ->get();
     return view('lists.votations', compact('censos'));
 })->name('votations.index');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/coordinator-count', function () {
+    $coordinators = Coordinator::all();
+
+    $voters = DB::table('coordinators as c')
+                    ->join('voter01s as v',DB::raw('v.coordinator_dni'),'=',DB::raw('c.dni'))
+                    ->select(DB::raw('count(*) as cantidad, c.dni as cedula'))
+                    ->where('v.guide','=',true)
+                    ->groupBy('c.dni')
+                    ->orderBy('cantidad','desc')
+                    ->get();
+
+    return view('lists.votations-coor', compact('voters','coordinators'));
+})->name('coordinators.count');

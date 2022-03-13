@@ -25,24 +25,29 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div>
-                    <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                    <div class="w-full  p-6">
                         <table class="table-auto">
                             <thead>
                                 <tr>
-                                    <th class="px-4 py-2">Puesto</th>
-                                    <th class="px-4 py-2">Votos</th>
+                                    <th class="border m-2 p-2">Cedula</th>
+                                    <th class="border m-2 p-2">Coordinador</th>
+                                    <th class="border m-2 p-2">Votos</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @php
                                     $totalizador = 0;
                                 @endphp
-                                @foreach ($censos as $puesto)
+                                @foreach ($voters as $puesto)
                                     <tr>
-                                        <td class="border px-4 py-2">{{ $puesto->puesto }}</td>
-                                        <td class="border px-4 py-2"><a
-                                                href="{{ route('listados.placers', $puesto->puesto) }}"
-                                                target="_blank">{{ $puesto->cantidad }}</a></td>
+                                        @foreach ($coordinators as $coordinator)
+                                            @if ($coordinator->dni == $puesto->cedula)
+                                                <td class="border m-2 p-2">{{ $puesto->cedula }}</td>
+                                                <td class="border m-2 p-2">{{ $coordinator->firstname }}
+                                                    {{ $coordinator->lastname }}</td>
+                                            @endif
+                                        @endforeach
+                                        <td class="border m-2 p-2 text-center">{{ $puesto->cantidad }}</td>
                                         @php
                                             $totalizador = $totalizador + $puesto->cantidad;
                                         @endphp
@@ -50,6 +55,7 @@
                                 @endforeach
                                 <tr>
                                     <td class="border px-4 py-2">Total</td>
+                                    <td class="border px-4 py-2"></td>
                                     <td class="border px-4 py-2">{{ $totalizador }}</td>
                                 </tr>
                             </tbody>

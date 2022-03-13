@@ -5,7 +5,8 @@
         </h2>
         <ul class="flex">
             <li class="mr-6">
-                {{ __('Dashboard') }}
+                <a href="{{ route('dashboard') }}"
+                    class="text-blue-500 hover:text-blue-800">{{ __('Dashboard') }}</a>
             </li>
             <li class="mr-6">
                 <a class="text-blue-500 hover:text-blue-800"
@@ -13,6 +14,9 @@
             </li>
             <li class="mr-6">
                 <a class="text-blue-500 hover:text-blue-800" href="{{ route('votations.index') }}">VOTACIONES</a>
+            </li>
+            <li class="mr-6">
+                <a class="text-blue-500 hover:text-blue-800" href="{{ route('coordinators.count') }}">CONTEO</a>
             </li>
         </ul>
     </x-slot>
