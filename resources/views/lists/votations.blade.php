@@ -25,7 +25,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div>
-                    <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                    <div class="w-full p-6">
                         <table class="table-auto">
                             <thead>
                                 <tr>
